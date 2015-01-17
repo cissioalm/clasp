@@ -1,0 +1,13 @@
+{
+  "name": "CLASP",
+  "version": "1.0.0",
+  "description": "Web site for the Computational Linguistics and Speech Processing Lab at RIT",
+  "main": "all.js",
+  "scripts": {},
+  "author": "Will Paul",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^2.1.3",
+    "markdown-to-json": "^0.4.2"
+  }
+}
