@@ -4,15 +4,122 @@
 @import "base/base";
 @import "neat";
 
+//////////////////////////////////////////////////////////////////////////////
+
+// String Replace
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// Font Face
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+// @include font-face("Mark", font-path("markbold-webfont"), "bold", "normal");
+// @include font-face("Mark", font-path("markbold-italic-webfont"), "bold", "italic");
+// @include font-face("Mark", font-path("markregular-webfont"), "normal", "normal");
+// @include font-face("Mark", font-path("markregularitalic-webfont"), "normal", "italic");
+
+@font-face {
+    font-family: 'mark';
+    src: url(font-path('markregular-webfont.eot'));
+    src: url(font-path('markregular-webfont.eot?#iefix')) format('embedded-opentype'),
+         url(font-path('markregular-webfont.woff2')) format('woff2'),
+         url(font-path('markregular-webfont.woff')) format('woff'),
+         url(font-path('markregular-webfont.ttf')) format('truetype'),
+         url(font-path('markregular-webfont.svg#markregular')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mark';
+    src: url(font-path('markregularitalic-webfont.eot'));
+    src: url(font-path('markregularitalic-webfont.eot?#iefix')) format('embedded-opentype'),
+         url(font-path('markregularitalic-webfont.woff2')) format('woff2'),
+         url(font-path('markregularitalic-webfont.woff')) format('woff'),
+         url(font-path('markregularitalic-webfont.ttf')) format('truetype'),
+         url(font-path('markregularitalic-webfont.svg#markregular')) format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'mark';
+    src: url(font-path('markbold-webfont.eot'));
+    src: url(font-path('markbold-webfont.eot?#iefix')) format('embedded-opentype'),
+         url(font-path('markbold-webfont.woff2')) format('woff2'),
+         url(font-path('markbold-webfont.woff')) format('woff'),
+         url(font-path('markbold-webfont.ttf')) format('truetype'),
+         url(font-path('markbold-webfont.svg#markbold')) format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mark';
+    src: url(font-path('markbold-italic-webfont.eot'));
+    src: url(font-path('markbold-italic-webfont.eot?#iefix')) format('embedded-opentype'),
+         url(font-path('markbold-italic-webfont.woff2')) format('woff2'),
+         url(font-path('markbold-italic-webfont.woff')) format('woff'),
+         url(font-path('markbold-italic-webfont.ttf')) format('truetype'),
+         url(font-path('markbold-italic-webfont.svg#mark-bold-italicbold')) format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+h1 {
+  font-family: "mark", $helvetica;
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   margin: 0;
+  font-family: "Mark", $helvetica;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .container {
   @include outer-container;
 }
 
-///////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 .banner {
 
