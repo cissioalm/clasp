@@ -7,6 +7,14 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
+    bitters (0.10.1)
+      bourbon (>= 3.2)
+      sass (>= 3.2)
+      thor
+    bourbon (4.1.1)
+      sass (~> 3.3)
+      thor
     celluloid (0.16.0)
       timers (~> 4.0.0)
     chunky_png (1.3.3)
@@ -58,6 +66,10 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
+    middleman-blog (3.5.3)
+      addressable (~> 2.3.5)
+      middleman-core (~> 3.2)
+      tzinfo (>= 0.3.0)
     middleman-core (3.3.7)
       activesupport (~> 4.1.0)
       bundler (~> 1.1)
@@ -84,6 +96,9 @@ GEM
       sprockets-sass (~> 1.3.0)
     minitest (5.5.1)
     multi_json (1.10.1)
+    neat (1.7.1)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     padrino-helpers (0.12.4)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.12.4)
@@ -126,8 +141,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitters
+  bourbon
   middleman (~> 3.3.7)
+  middleman-blog
   middleman-gh-pages
   middleman-livereload (~> 3.1.0)
+  neat
   tzinfo-data
   wdm (~> 0.1.0)
