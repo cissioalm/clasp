@@ -55,6 +55,8 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 
+ignore "node_modules"
+
 activate :blog do |blog|
   blog.prefix = "news"
   blog.permalink = "news/{title}.html"
