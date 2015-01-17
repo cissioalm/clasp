@@ -5,22 +5,29 @@ page: home
 
 <%= partial "header" %>
 
-<article>
-  <h2>Computational <br />
+<div class="content">
+  <article>
+    <h2 class="important">
+      Computational <br />
       Linguistics and <br/>
       Speech Processing <br/>
-      Lab at RIT </h2>
+      Lab at RIT <br />
+      &mdash;
+    </h2>
 
-  <p><%= lorem.paragraph %></p>
+    <%= image_tag "group.jpg", width: '50%' %>
 
-  <p><%= lorem.paragraph %></p>
+    <p><%= lorem.paragraph %></p>
 
-</article>
+    <p><%= lorem.paragraph %></p>
 
-<section>
-  <h2>Recent News</h2>
+  </article>
 
-  <p><%= lorem.paragraph %></p>
+  <section>
+    <h2>Recent News</h2>
 
-  <p><%= lorem.paragraph %></p>
-</section>
+    <p><%= lorem.paragraph %></p>
+
+    <p><%= lorem.paragraph %></p>
+  </section>
+</div>
