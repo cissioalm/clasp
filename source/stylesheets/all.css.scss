@@ -76,6 +76,7 @@ body {
 
 .content {
   padding: 1em;
+  border: 1px solid gainsboro;
 }
 
 h2.important {
@@ -99,10 +100,10 @@ h2.important {
   $horizontal-bar-mode: $large-screen;
 
   background-color: $banner-background;
-  border-bottom: 1px solid darken($banner-background, 6%);
   min-height: $banner-height;
   width: 100%;
   z-index: 9999;
+  border: 1px solid gainsboro;
 
   a {
     border-bottom: none;
@@ -227,15 +228,16 @@ h2.important {
 //////////////////////////////////////////////////////////////////////////////
 
 .cards {
-  @include display(flex);
-  @include flex-wrap(wrap);
-  @include justify-content(space-between);
+  @include clearfix;
+}
+
+/*h\d*/.card-section {
+  margin-bottom: $base-spacing / 4;
 }
 
 .card {
-
   $base-border-color: gainsboro !default;
-  $base-border-radius: 3px !default;
+  $base-border-radius: 0 !default;
   $base-background-color: white !default;
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
@@ -251,59 +253,41 @@ h2.important {
   $card-image-background: #DBD199;
   $card-image-hover-background: lighten($card-image-background, 5%);
   $card-stats-color: lighten($base-accent-color, 10%);
-  $card-padding-for-absolute-stats: 5em;
   $card-margin: 0em;
 
-  @include flex-basis(15em);
-  @include flex-grow(1);
-  @include transition (all 0.2s ease-in-out);
   background-color: $card-background;
   border-radius: $base-border-radius;
   border: $card-border;
-  box-shadow: 0 2px 4px darken($base-background-color, 10%);
-  cursor: pointer;
-  margin: 0 $card-margin $base-spacing $card-margin;
-  padding-bottom: $card-padding-for-absolute-stats;
   position: relative;
-  position: relative;
+  float: left;
 
-  .card-image {
-    overflow: hidden;
-    max-height: 150px;
+  width: 29%;
+  margin: 0 6.5% $base-spacing 0;
 
-    img {
-      @include transition (all 0.2s ease-in-out);
-      background: $card-image-background;
-      border-top-left-radius: $base-border-radius;
-      border-top-right-radius: $base-border-radius;
-      width: 100%;
+  @include media(min-width $large-screen) {
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 
-  .ribbon-wrapper {
-    $ribbon-background: $base-accent-color;
-    $ribbon-size: 85px;
-    @include size($ribbon-size);
-    overflow: hidden;
-    position: absolute;
-    right: -1px;
-    top: -1px;
-
-    .ribbon {
-      @include transform(rotate(45deg));
-      background-color: $ribbon-background;
-      box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
-      color: white;
-      font-size: 0.8em;
-      font-weight: 800;
-      left: -5px;
-      line-height: 1.5em;
-      padding: 2px 7px;
-      position: relative;
-      text-align: center;
-      top: 15px;
-      width: 120px;
+  @include media(max-width $large-screen min-width $small-screen) {
+    width: 48%;
+    margin-right: 4%;
+    &:nth-child(2n) {
+      margin-right: 0;
     }
+  }
+
+  @include media(max-width $small-screen) {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .card-image img {
+    @include transition (all 0.2s ease-in-out);
+    background: $card-image-background;
+    margin: ($base-spacing / 2) ($base-spacing / 2);
+    max-height: 180px;
   }
 
   .card-header {
@@ -316,6 +300,17 @@ h2.important {
     padding: ($base-spacing / 3) ($base-spacing / 2);
   }
 
+  .card-title {
+    border-bottom: 1px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: 0.7em;
+    font-weight: 800;
+    margin: 0 $base-spacing !important;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
   .card-copy {
     font-size: 0.9em;
     line-height: 1.5em;
@@ -325,63 +320,14 @@ h2.important {
       margin: 0 0 ($base-spacing / 2);
     }
   }
+}
 
-  .card-stats {
-    @include align-self(flex-end);
-    bottom: 0.5em;
-    overflow: auto;
-    padding: $base-spacing / 2;
-    position: absolute;
-
-    ul {
-      padding: 0;
-    }
-
-    li {
-      border-right: 1px solid transparentize($base-font-color, 0.8);
-      color: $card-stats-color;
-      display: inline;
-      float: left;
-      font-size: 1.2em;
-      font-weight: 800;
-      line-height: 1.1em;
-      padding: 0 0.7em;
-
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:last-child {
-        border-right: 0;
-      }
-
-      span {
-        color: $base-font-color;
-        display: block;
-        font-size: 0.7em;
-        font-weight: normal;
-      }
-    }
-  }
-
-  &:focus,
-  &:hover {
-    background-color: $card-hover-background;
-
-    .card-image img {
-      background: $card-image-hover-background;
-    }
-
-    .card-header {
-      background-color: $card-hover-background;
-    }
-  }
-
-  &:active {
-    background-color: $card-background;
-
-    .card-header {
-      background-color: $card-background;
+@include media(min-width $small-screen) {
+  .card--director {
+    width: 48%;
+    margin-right: 4%;
+    &:nth-child(2n) {
+      margin-right: 0;
     }
   }
 }
