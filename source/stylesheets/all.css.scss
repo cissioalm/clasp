@@ -3,6 +3,7 @@
 @import "bourbon";
 @import "base/base";
 @import "neat";
+@import "footable";
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -404,6 +405,10 @@ h2.important {
 ///////////////////////////////////////////////////////////////////////////////
 
 .publications {
+
+  table {
+    table-layout: fixed;
+  }
 
   tr, th, td {
     vertical-align: text-top;
