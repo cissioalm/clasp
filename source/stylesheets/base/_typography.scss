@@ -43,6 +43,32 @@ h6 {
   font-size: $h6-font-size;
 }
 
+@media (max-width: 580px) {
+  h1 {
+    font-size: $h2-font-size;
+  }
+
+  h2 {
+    font-size: $h3-font-size;
+  }
+
+  h3 {
+    font-size: $h4-font-size;
+  }
+
+  h4 {
+    font-size: $h5-font-size;
+  }
+
+  h5 {
+    font-size: $h6-font-size;
+  }
+
+  h6 {
+    font-size: $base-font-size;
+  }
+}
+
 p {
   margin: 0 0 ($base-spacing / 2);
 }
