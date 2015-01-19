@@ -23,6 +23,9 @@ $(document).ready(function() {
   }
 
   if ($.contains(document.body, $("#js-publications")[0])) {
-    $(function () { $("#js-publications").footable(); });
+    $(function () { $("#js-publications").footable({
+        addRowToggle: false
+      });
+    });
   }
 });

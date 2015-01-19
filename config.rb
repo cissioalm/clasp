@@ -35,7 +35,7 @@
 helpers do
   def current link
     if link.downcase == current_page.data.page.downcase
-      return " link--higlight "
+      return " link--highlight "
     else
       return ""
     end
