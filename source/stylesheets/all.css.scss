@@ -86,6 +86,11 @@ h2.important {
   font-size: $h1-font-size;
 }
 
+.caption {
+  font-size: 0.85em;
+  font-style: italic;
+}
+
 //////////////////////////////////////////////////////////////////////////////
 
 .banner {
@@ -424,7 +429,7 @@ h2.important {
   }
 
   th, td {
-    padding-right: 3px;
+    padding: 3px;
   }
 
   td:nth-child(2) > p:first-child {
