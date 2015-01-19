@@ -276,6 +276,10 @@ h2.important {
     &:nth-child(3n) {
       margin-right: 0;
     }
+
+    &:nth-child(3n+1) {
+      clear: both;
+    }
   }
 
   @include media(max-width $large-screen min-width $small-screen) {
