@@ -95,23 +95,31 @@ h2.important {
 
 .banner {
 
-  $base-border-radius: 3px !default;
   $base-font-color: $dark-gray !default;
   $banner-padding: 1em;
+
+  $banner-logo-height-mobile: 2em;
+  $banner-height-mobile: 4em;
   $banner-logo-height: 3.5em;
+  $banner-height: 6em;
+
   $banner-background: #E7F1EC;
   $banner-color: transparentize($base-font-color, 0.3);
   $banner-color-hover: $base-font-color;
-  $banner-height: 6em;
   $banner-item-padding: 1em;
   $banner-item-nudge: 2.2em;
   $horizontal-bar-mode: $large-screen;
 
   background-color: $banner-background;
-  min-height: $banner-height;
   width: 100%;
   z-index: 9999;
   border: 1px solid gainsboro;
+
+  // min-height: $banner-height-mobile;
+
+  @include media($horizontal-bar-mode) {
+    min-height: $banner-height;
+  }
 
   a {
     border-bottom: none;
@@ -128,7 +136,12 @@ h2.important {
   .logo {
     float: left;
     padding: 0.25em;
-    font-size: $banner-logo-height;
+    margin-bottom: 0;
+    font-size: $banner-logo-height-mobile;
+
+    @include media($horizontal-bar-mode) {
+      font-size: $banner-logo-height;
+    }
   }
 
   .banner-mobile-menu {
@@ -136,7 +149,7 @@ h2.important {
     display: block;
     float: right;
     font-weight: 700;
-    line-height: $banner-height;
+    line-height: $banner-height-mobile;
     margin: 0;
     padding-right: $banner-padding;
     text-decoration: none;
@@ -364,6 +377,14 @@ h2.important {
 .minor-col {
   float: right;
   width: 40%;
+}
+
+@include media(max-width $medium-screen) {
+  .main-col,
+  .minor-col {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .title {
