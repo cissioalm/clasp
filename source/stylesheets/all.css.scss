@@ -61,6 +61,7 @@ h4,
 h5,
 h6 {
   font-family: "mark", $helvetica;
+  margin-bottom: 0.25em;
 }
 
 body {
@@ -77,6 +78,7 @@ body {
 .content {
   padding: 1em;
   border: 1px solid gainsboro;
+  @include clearfix;
 }
 
 h2.important {
@@ -329,6 +331,95 @@ h2.important {
     &:nth-child(2n) {
       margin-right: 0;
     }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+.hero {
+  width: 100%;
+}
+
+.main-col {
+  float: left;
+  width: 55%;
+  margin-right: 5%;
+}
+
+.minor-col {
+  float: right;
+  width: 40%;
+}
+
+.title {
+  margin-bottom: 0.25em;
+}
+
+.date {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: $sans-serif;
+  font-size: 0.7em;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.news {
+  width: 60%;
+  float: left;
+}
+
+.calendar {
+  width: 36%;
+  float: right;
+}
+
+@include media(max-width $medium-screen) {
+  .calendar,
+  .news {
+    width: 100%;
+  }
+}
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  margin-top: 1.25em;
+  height: 0;
+  overflow: hidden;
+}
+
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+.publications {
+
+  tr, th, td {
+    vertical-align: text-top;
+  }
+
+  p {
+    // margin-bottom: 0;
+  }
+
+  td:nth-child(2) > p:first-child {
+    font-weight: bold;
+  }
+
+  td:nth-child(2) > p:nth-child(3) {
+    font-size: 0.85em;
+    font-style: italic;
   }
 }
 

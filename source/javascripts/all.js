@@ -12,4 +12,17 @@ $(document).ready(function() {
       }
     });
   });
+
+  if ($.contains(document.body, $("#js-news")[0])) {
+    $.get("news.html", function(data) {
+      var vdom = $('<div></div>');
+      vdom.html(data);
+      console.log($(".news > article", vdom)[0]);
+      $("#js-news").append($(".news > article", vdom)[0]);
+    });
+  }
+
+  if ($.contains(document.body, $("#js-publications")[0])) {
+    $(function () { $("#js-publications").footable(); });
+  }
 });
