@@ -98,10 +98,10 @@ h2.important {
   $base-font-color: $dark-gray !default;
   $banner-padding: 1em;
 
-  $banner-logo-height-mobile: 2em;
-  $banner-height-mobile: 4em;
-  $banner-logo-height: 3.5em;
-  $banner-height: 6em;
+  $banner-logo-height-mobile: 4em;
+  $banner-height-mobile: 6em;
+  $banner-logo-height: 5em;
+  $banner-height: 7em;
 
   $banner-background: #E7F1EC;
   $banner-color: transparentize($base-font-color, 0.3);
@@ -135,12 +135,13 @@ h2.important {
 
   .logo {
     float: left;
-    padding: 0.25em;
+    display: inline;
+    padding: $banner-padding;
     margin-bottom: 0;
-    font-size: $banner-logo-height-mobile;
+    height: $banner-height-mobile;
 
     @include media($horizontal-bar-mode) {
-      font-size: $banner-logo-height;
+      height: $banner-height;
     }
   }
 
@@ -365,7 +366,12 @@ h2.important {
 ///////////////////////////////////////////////////////////////////////////////
 
 .hero {
-  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.two-col {
+  float: left;
+  width: 50%;
 }
 
 .main-col {
