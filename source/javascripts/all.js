@@ -26,7 +26,6 @@ $(document).ready(function() {
       vdom.html(data);
       $articles = $(".news > article", vdom);
       num_articles = $articles.length;
-      // console.log(num_articles);
 
       $articles.each(function(i) {
         if (i < max_articles) {
@@ -35,15 +34,12 @@ $(document).ready(function() {
               $output = $('<article class="news-articles"></article>'),
               link = "<a href='news.html#" + this.id + "' class='js-news-links'></a>";
 
-          console.log(this.id);
           $title.wrap(link);
           $title = $(".js-news-links", this);
           $output.append($date).append($title);
           $dom_entry.append($output);
         }
       });
-
-      // .append($(".news > article", vdom)[0]);
     });
   }
 
