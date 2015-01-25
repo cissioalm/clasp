@@ -32,9 +32,11 @@ $(document).ready(function() {
         if (i < max_articles) {
           var $date = $(".date", this),
               $title = $(".title", this),
-              $output = $('<article class="news-articles"></article>');
+              $output = $('<article class="news-articles"></article>'),
+              link = "<a href='news.html#" + this.id + "' class='js-news-links'></a>";
 
-          $title.wrap("<a href='news.html' class='js-news-links'></a>");
+          console.log(this.id);
+          $title.wrap(link);
           $title = $(".js-news-links", this);
           $output.append($date).append($title);
           $dom_entry.append($output);
