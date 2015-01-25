@@ -92,9 +92,10 @@ h2.important {
 }
 
 .news-articles {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 .js-news-links {
+  font-size: .75em;
   text-decoration: underline;
 }
 
@@ -392,11 +393,21 @@ h2.important {
   width: 40%;
 }
 
+.mobile-block {
+  display: none;
+  visibility: hidden;
+}
+
 @include media(max-width $medium-screen) {
   .main-col,
   .minor-col {
     width: 100%;
     margin-right: 0;
+  }
+
+  .mobile-block {
+    display: block;
+    visibility: visible;
   }
 }
 
