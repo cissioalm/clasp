@@ -54,11 +54,6 @@ set :fonts_dir, 'fonts'
 set :relative_links, true
 ignore "node_modules/*"
 
-activate :blog do |blog|
-  blog.prefix = "news"
-  blog.permalink = "news/{title}.html"
-end
-
 activate :deploy do |deploy|
   deploy.method = :git
 end
@@ -72,7 +67,7 @@ configure :build do
   # activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
+  # activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
