@@ -1,20 +1,20 @@
-<header class="banner" role="banner">
-  <div class="banner-wrapper">
+  <header class="banner" role="banner">
+    <div class="banner-wrapper">
 
-    <a href="index.html">
-      <img src="<%= image_path "logo.svg" %>" onerror="this.src= <%= image_path "logo.png" %>" alt="CLASP: Computational Linguistics and Speech Processing Lab" class="logo" />
-    </a>
+      <a href="index.html">
+        <img src="<%= image_path "logo.svg" %>" onerror="this.src= <%= image_path "logo.png" %>" alt="CLASP: Computational Linguistics and Speech Processing Lab" class="logo" />
+      </a>
 
-    <nav class="main-nav" role="navigation">
-      <a href="javascript:void(0)" id="js-banner-mobile-menu" class="banner-mobile-menu">MENU</a>
+      <nav class="main-nav" role="navigation">
+        <a href="javascript:void(0)" id="js-banner-mobile-menu" class="banner-mobile-menu">MENU</a>
 
-      <ul id="js-banner-menu" class="banner-menu show">
-        <li class="nav-link"><%= link_to "home", "index.html", class: current("home") %></li>
-        <li class="nav-link"><%= link_to "people", "people.html", class: current("people") %></li>
-        <li class="nav-link"><%= link_to "publications", "publications.html", class: current("publications") %></li>
-        <li class="nav-link"><%= link_to "news", "news.html", class: current("news") %></li>
-        <li class="nav-link"><%= link_to "contact", "contact.html", class: current("contact") %></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+        <ul id="js-banner-menu" class="banner-menu show">
+          <li class="nav-link"><%= link_to "home", "index.html", class: current("home") %></li>
+          <li class="nav-link"><%= link_to "people", "people.html", class: current("people") %></li>
+          <li class="nav-link"><%= link_to "publications", "publications.html", class: current("publications") %></li>
+          <li class="nav-link"><%= link_to "news", "news.html", class: current("news") %></li>
+          <li class="nav-link"><%= link_to "contact", "contact.html", class: current("contact") %></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
