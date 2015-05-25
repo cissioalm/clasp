@@ -19,7 +19,7 @@ $(document).ready(function() {
     $.get("news.html", function(data) {
       var vdom = $('<section></section>'),
           $dom_entry = $("#js-news"),
-          max_articles = 5,
+          max_articles = 8,
           num_articles,
           $articles;
 
