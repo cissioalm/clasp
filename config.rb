@@ -51,11 +51,23 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
+set :build_dir, 'www'
 set :relative_links, true
 ignore "node_modules/*"
 
-activate :deploy do |deploy|
-  deploy.method = :git
+case ENV['TARGET'].to_s.downcase
+when 'prod'
+  activate :deploy do |deploy|
+    deploy.method = :sftp
+    deploy.host = 'ritweboffshell.rit.edu'
+    deploy.port = 22
+    deploy.path = '/home/w-clasp/www/'
+    deploy.user = ENV['USER']
+  end
+else
+  activate :deploy do |deploy|
+    deploy.method = :git
+  end
 end
 
 # Build-specific configuration
