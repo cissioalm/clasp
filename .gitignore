@@ -19,3 +19,5 @@
 
 # In case other people use something other than Chruby or RVM
 .ruby-version
+
+node_modules/
