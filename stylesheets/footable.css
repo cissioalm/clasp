@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "footable";
+  src: url("../fonts/footable.eot");
+  src: url("../fonts/fonts/footable.eot?#iefix") format("embedded-opentype"), url("../fonts/footable.woff") format("woff"), url("../fonts/footable.ttf") format("truetype"), url("../fonts/fonts/footable.svg#footable") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "footable";
+    src: url("fonts/footable.svg#footable") format("svg");
+    font-weight: normal;
+    font-style: normal; } }
+/* line 19, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable {
+  width: 100%;
+  /** SORTING **/
+  /** PAGINATION **/ }
+
+/* line 25, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint > tbody > tr.footable-detail-show > td {
+  border-bottom: none; }
+
+/* line 28, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e001"; }
+
+/* line 31, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint > tbody > tr:hover:not(.footable-row-detail) {
+  cursor: pointer; }
+
+/* line 34, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint > tbody > tr > td.footable-cell-detail {
+  background: #eee;
+  border-top: none; }
+
+/* line 38, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint > tbody > tr > td > span.footable-toggle {
+  display: inline-block;
+  font-family: "footable";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  padding-right: 5px;
+  font-size: 14px;
+  color: #888888; }
+
+/* line 51, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint > tbody > tr > td > span.footable-toggle:before {
+  content: "\e000"; }
+
+/* line 54, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-circle > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e005"; }
+
+/* line 57, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-circle > tbody > tr > td > span.footable-toggle:before {
+  content: "\e004"; }
+
+/* line 60, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-circle-filled > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e003"; }
+
+/* line 63, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-circle-filled > tbody > tr > td > span.footable-toggle:before {
+  content: "\e002"; }
+
+/* line 66, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-square > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e007"; }
+
+/* line 69, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-square > tbody > tr > td > span.footable-toggle:before {
+  content: "\e006"; }
+
+/* line 72, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-square-filled > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e009"; }
+
+/* line 75, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-square-filled > tbody > tr > td > span.footable-toggle:before {
+  content: "\e008"; }
+
+/* line 78, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e00f"; }
+
+/* line 81, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow > tbody > tr > td > span.footable-toggle:before {
+  content: "\e011"; }
+
+/* line 84, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-small > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e013"; }
+
+/* line 87, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-small > tbody > tr > td > span.footable-toggle:before {
+  content: "\e015"; }
+
+/* line 90, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-circle > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e01b"; }
+
+/* line 93, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-circle > tbody > tr > td > span.footable-toggle:before {
+  content: "\e01d"; }
+
+/* line 96, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-circle-filled > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e00b"; }
+
+/* line 99, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-circle-filled > tbody > tr > td > span.footable-toggle:before {
+  content: "\e00d"; }
+
+/* line 102, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-tiny > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e01f"; }
+
+/* line 105, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-tiny > tbody > tr > td > span.footable-toggle:before {
+  content: "\e021"; }
+
+/* line 108, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-alt > tbody > tr.footable-detail-show > td > span.footable-toggle:before {
+  content: "\e017"; }
+
+/* line 111, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-arrow-alt > tbody > tr > td > span.footable-toggle:before {
+  content: "\e019"; }
+
+/* line 114, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-medium > tbody > tr > td > span.footable-toggle {
+  font-size: 18px; }
+
+/* line 117, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.breakpoint.toggle-large > tbody > tr > td > span.footable-toggle {
+  font-size: 24px; }
+
+/* line 120, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable > thead > tr > th {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 128, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable > thead > tr > th.footable-sortable:hover {
+  cursor: pointer; }
+
+/* line 131, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable > thead > tr > th.footable-sorted > span.footable-sort-indicator:before {
+  content: "\e013"; }
+
+/* line 134, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable > thead > tr > th.footable-sorted-desc > span.footable-sort-indicator:before {
+  content: "\e012"; }
+
+/* line 137, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable > thead > tr > th > span.footable-sort-indicator {
+  display: inline-block;
+  font-family: "footable";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  padding-left: 5px; }
+
+/* line 148, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable > thead > tr > th > span.footable-sort-indicator:before {
+  content: "\e022"; }
+
+/* line 151, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable > tfoot .pagination {
+  margin: 0; }
+
+/* line 154, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable.no-paging .hide-if-no-paging {
+  display: none; }
+
+/* line 157, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable-row-detail-inner {
+  display: table; }
+
+/* line 160, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable-row-detail-row {
+  display: table-row;
+  line-height: 1.5em; }
+
+/* line 164, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable-row-detail-group {
+  display: block;
+  line-height: 2em;
+  font-size: 1.2em;
+  font-weight: bold; }
+
+/* line 170, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable-row-detail-name {
+  display: table-cell;
+  font-weight: bold;
+  padding-right: 0.5em; }
+
+/* line 175, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable-row-detail-value {
+  display: table-cell; }
+
+/* line 178, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
+.footable-odd {
+  background-color: #f7f7f7; }
