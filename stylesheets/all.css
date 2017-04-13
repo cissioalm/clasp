@@ -787,7 +787,7 @@ h2.important {
     padding: 0.5em 0.75em; }
   /* line 347, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
   .card .card-title {
-    border-bottom: 1px solid;
+    /*border-bottom: 1px solid;*/
     display: inline-block;
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     font-size: 0.7em;
