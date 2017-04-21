@@ -620,7 +620,8 @@ h2.important {
     border-bottom: none; }
   /* line 141, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
   .banner .link--highlight {
-    text-decoration: underline !important; }
+    font-weight: bold;
+    color: black !important; }
   /* line 145, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
   .banner nav {
     float: right; }
