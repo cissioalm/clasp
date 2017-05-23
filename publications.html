@@ -55,15 +55,15 @@
   <input type="text" placeholder="Filter by term, e.g. semantics or IEEE..." class="filter" id="js-text-filter">
 
   <table class="publications toggle-arrow-tiny" id="js-publications" data-filter="#js-text-filter">
-    <col width="10%">
+    <col width="6%">
     <col width="5%">
-    <col width="65%">
+    <col width="69%">
     <col width="20%">
 
     <thead>
       <tr>
         <th data-hide="phone">Year</th>
-        <th data-toggle="true">Link</th>
+        <th data-sort-ignore="true"></th>
         <th data-toggle="true">Publication</th>
         <th data-hide="phone">Topic(s)</th>
       </tr>
@@ -75,7 +75,7 @@
         <td></td>
         <td>
           <p>
-            Natural language insights from code reviews that missed a vulnerability: A large scale study of Chromium.
+            <em>Natural language insights from code reviews that missed a vulnerability: A large scale study of Chromium.</em>
           </p>
           <p>
             Nuthan Munaiah, <b>Benjamin S. Meyers</b>, <b>Cecilia O. Alm</b>, Andrew Meneely, Pradeep K. Murukannaiah, <b>Emily Prud'hommeaux</b>, Josephine Wolff, and Yang Yu.
@@ -92,7 +92,7 @@
         <td></td>
         <td>
           <p>
-            Vector space models for evaluating semantic fluency in autism.
+            <em>Vector space models for evaluating semantic fluency in autism.</em>
           </p>
           <p>
             <b>Emily Prud'hommeaux</b>, Jan van Santen, and <b>Douglas Gliner</b>.
@@ -109,7 +109,8 @@
         <td>
           <br>
           <p><a href="http://www.aclweb.org/anthology/W/W17/W17-1801.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <!--<p><a href="javascript:copyToClipboard('#Calderwood2017');" title="Click to Copy Citation."><i class="fa fa-book fa-2x"></i></a></p>-->
+          <br>
+          <p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Calderwood2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
         </td>
         <td>
           <p>
@@ -121,21 +122,22 @@
           <p>
             Proceedings of the Workshop on Computational Semantics beyond Events and Roles (at EACL 2017).
           </p>
-          <p hidden id="Calderwood2017">
-            Understanding the semantics of narratives of interpersonal violence through reader annotations and physiological reactions. Alexander Calderwood, Elizabeth A. Pruett, Raymond Ptucha, Christopher Homan, and Cecilia O. Alm. Proceedings of the Workshop on Computational Semantics beyond Events and Roles. EACL. 2017.
-          </p>
+          <p hidden id="Calderwood2017">@article{Calderwood:2017, title={Understanding the Semantics of Narratives of Interpersonal Violence through Reader Annotations and Physiological Reactions}, author={Calderwood, Alexander and Pruett, Elizabeth A and Ptucha, Raymond and Homan, Christopher M and Alm, Cecilia O}, journal={SemBEaR 2017}, pages={1}, year={2017}}</p>
         </td>
         <td><span>Multimodal, Semantics</span></td>
       </tr>
 
       <tr>
         <td>2017</td>
-        <td></td>
+        <td>
+          <br>
+          <p><a href="http://delivery.acm.org/10.1145/3040000/3038536/p25-edwards.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br>
+          <p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Edwards2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+        </td>
         <td>
           <p>
-            <a href="http://dl.acm.org/citation.cfm?id=3038536" target="_blank" title="Link to pdf.">
-              Sensor-based methodological observations for studying online learning.
-            </a>
+            <em>Sensor-based methodological observations for studying online learning.</em>
           </p>
           <p>
             Ashley Edwards, Anthony Massicci, Srinivas Sridharan, Joe Geigel, Linwei Wang,  Reynold Bailey, and <b>Cecilia O. Alm</b>.
@@ -143,18 +145,22 @@
           <p>
             Proceedings of the SmartLearn Workshop: Intelligent Interfaces for Ubiquitous and Smart Learning (at IUI 2017).
           </p>
+          <p hidden id="Edwards2017">@inproceedings{Edwards:2017, title={Sensor-based Methodological Observations for Studying Online Learning}, author={Edwards, Ashley A and Massicci, Anthony and Sridharan, Srinivas and Geigel, Joe and Wang, Linwei and Bailey, Reynold and Alm, Cecilia Ovesdotter}, booktitle={Proceedings of the 2017 ACM Workshop on Intelligent Interfaces for Ubiquitous and Smart Learning}, pages={25--30}, year={2017}, organization={ACM}}</p>
         </td>
         <td><span>Multimodal</span></td>
       </tr>
 
       <tr>
         <td>2017</td>
-        <td></td>
+        <td>
+          <br>
+          <p><a href="https://www.cs.utexas.edu/~vsub/pdf/wacv-semantic-text.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br>
+          <p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Sah2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+        </td>
         <td>
           <p>
-            <a href="https://www.cs.utexas.edu/~vsub/pdf/wacv-semantic-text.pdf" target="_blank" title="Link to pdf.">
-              Semantic text summarization of long videos.
-            </a>
+            <em>Semantic text summarization of long videos.</em>
           </p>
           <p>
             Shagan Sah, Sourabh Kulhare, Allison Gray, Subhashini Venugopalan, <b>Emily Prud’hommeaux</b>, and Raymond Ptucha.
@@ -162,6 +168,7 @@
           <p>
             Proceedings of the IEEE Winter Conference on Applications of Computer Vision. Accepted.
           </p>
+          <p hidden id="Sah2017">@article{Sah:2017, title={Semantic Text Summarization of Long Videos}, author={Sah, Shagan and Kulhare, Sourabh and Gray, Allison and Venugopalan, Subhashini and Prud'hommeaux, Emily and Ptucha, Raymond}, organization="IEEE"}</p>
         </td>
         <td><span>Image processing, Multimodal</span></td>
       </tr>

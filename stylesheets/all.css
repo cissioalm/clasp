@@ -107,11 +107,11 @@ a {
   transition: color 0.1s linear;
   color: #FF6D24;
   text-decoration: none;
-  border-bottom: 1px solid #FF6D24; }
+  /*border-bottom: 1px solid #FF6D24;*/ }
   /* line 82, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_typography.scss */
   a:hover {
     color: #d64700;
-    border-bottom: 1px solid #d64700; }
+    /*border-bottom: 1px solid #d64700;*/ }
   /* line 87, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_typography.scss */
   a:active, a:focus {
     color: #d64700;
