@@ -918,4 +918,8 @@ h2.important {
   font-size: 0.85em;
   font-style: italic; }
 
+.publications > tbody > tr > td > p > a {
+  text-decoration: none !important;
+}
+
 /*///////////////////////////////////////////////////////////////////////////*/
