@@ -97,8 +97,7 @@ h6 {
   h6 {
     font-size: 1em; } }
 /* line 72, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_typography.scss */
-p {
-  margin: 0 0 0.75em; }
+p { margin: 0 0 0.75em; }
 
 /* line 76, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_typography.scss */
 a {
@@ -821,7 +820,9 @@ h2.important {
 /* line 385, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .two-col {
   float: left;
-  width: 50%; }
+  width: 50%;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #DDDDDD; }
 
 /* line 390, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .main-col {
@@ -904,22 +905,202 @@ h2.important {
 .publications table {
   table-layout: fixed; }
 /* line 478, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
-.publications tr, .publications th, .publications td {
+.publications tr, .publications th {
   vertical-align: text-top; }
 /* line 482, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .publications th, .publications td {
   padding: 3px; }
 /* line 486, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
-.publications td:nth-child(2) > p:first-child {
+.publications td:nth-child(2) > p {
+  margin-bottom: 0 !important;
+}
+.publications td:nth-child(3) > p:first-child {
   font-weight: bold;
   font-style: italic; }
 /* line 491, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
-.publications td:nth-child(2) > p:nth-child(3) {
+.publications td:nth-child(3) > p:nth-child(3) {
   font-size: 0.85em;
-  font-style: italic; }
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.publications td:nth-child(4) > p.tag {
+  border: 2px solid;
+  border-radius: 15px;
+  text-align: center;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
+.publications td:nth-child(4) > p.tag:hover {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.publications td:nth-child(4) > p.tag:before {
+  width: 1.28571429em;
+  font-family: 'FontAwesome';
+  font-weight: normal !important;
+}
+
+.publications td:nth-child(4) > p.tag.tag-medical {
+  border-color: #FF6D24;
+  background-color: #FF6D24;
+}
+
+.publications td:nth-child(4) > p.tag.tag-medical:before {
+  content: "\f21e";  
+}
+
+.publications td:nth-child(4) > p.tag.tag-semantics {
+  border-color: deepskyblue;
+  background-color: deepskyblue;
+}
+
+.publications td:nth-child(4) > p.tag.tag-semantics:before {
+  content: "\f12e";
+}
+
+.publications td:nth-child(4) > p.tag.tag-software {
+  border-color: darkslateblue;
+  background-color: darkslateblue;
+}
+
+.publications td:nth-child(4) > p.tag.tag-software:before {
+  content: "\f120";
+}
+
+.publications td:nth-child(4) > p.tag.tag-discourse {
+  border-color: darkgreen;
+  background-color: darkgreen;
+}
+
+.publications td:nth-child(4) > p.tag.tag-discourse:before {
+  content: "\f095";
+}
+
+.publications td:nth-child(4) > p.tag.tag-cybersecurity {
+  height: 26px !important;
+  border-color: darkmagenta;
+  background-color: darkmagenta;
+  font-size: 14px !important;
+}
+
+.publications td:nth-child(4) > p.tag.tag-cybersecurity:before {
+  content: "\f023";
+  font-size: 14px !important;
+}
+
+.publications td:nth-child(4) > p.tag.tag-imageprocessing {
+  border-color: #46CC00;
+  background-color: #46CC00;
+}
+
+.publications td:nth-child(4) > p.tag.tag-imageprocessing:before {
+  content: "\f030";
+}
+
+.publications td:nth-child(4) > p.tag.tag-affect {
+  border-color: #333333;
+  background-color: #333333;
+}
+
+.publications td:nth-child(4) > p.tag.tag-affect:before {
+  content: "\f118";
+}
+
+.publications td:nth-child(4) > p.tag.tag-socialmedia {
+  border-color: #660000;
+  background-color: #660000;
+}
+
+.publications td:nth-child(4) > p.tag.tag-socialmedia:before {
+  content: "\f292";
+}
+
+.publications td:nth-child(4) > p.tag.tag-eyetracking {
+  border-color: #6666ff;
+  background-color: #6666ff;
+}
+
+.publications td:nth-child(4) > p.tag.tag-eyetracking:before {
+  content: "\f06e";
+}
+
+.publications td:nth-child(4) > p.tag.tag-psycholinguistics {
+  height: 26px !important;
+  line-height: 200%;
+  border-color: #664400;
+  background-color: #664400;
+  font-size: 11px !important;
+}
+
+.publications td:nth-child(4) > p.tag.tag-psycholinguistics:before {
+  content: "\f1b3";
+  font-size: 11px !important;
+}
+
+.publications td:nth-child(4) > p.tag.tag-speech {
+  border-color: #666666;
+  background-color: #666666;
+}
+
+.publications td:nth-child(4) > p.tag.tag-speech:before {
+  content: "\f0a1";
+}
+
+.publications td:nth-child(4) > p.tag.tag-multimodal {
+  border-color: #000099;
+  background-color: #000099;
+}
+
+.publications td:nth-child(4) > p.tag.tag-multimodal:before {
+  content: "\f03d";
+}
+
+.publications td:nth-child(4) > p.tag.tag-annotation {
+  border-color: #513127;
+  background-color: #513127;
+}
+
+.publications td:nth-child(4) > p.tag.tag-annotation:before {
+  content: "\f040";
+}
+
+.publications td:nth-child(4) > p.tag.tag-narratives {
+  border-color: #CC3399;
+  background-color: #CC3399;
+}
+
+.publications td:nth-child(4) > p.tag.tag-narratives:before {
+  content: "\f0f6";
+}
+
+.publications td:nth-child(4) > p.tag.tag-literature {
+  border-color: #6689A1;
+  background-color: #6689A1;
+}
+
+.publications td:nth-child(4) > p.tag.tag-literature:before {
+  content: "\f02d";
+}
+
+.publication td:nth-child(3) {}
 
 .publications > tbody > tr > td > p > a {
   text-decoration: none !important;
+}
+
+p.bibtex > a {
+  text-decoration: none !important;
+}
+
+td.year {
+  font-weight: bold;
+  vertical-align: text-top;
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/

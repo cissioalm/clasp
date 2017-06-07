@@ -13,33 +13,20 @@
     <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/4bf3214f2e.js"></script>
     <script src="javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.get("assets/header.html", function(htmlFile) {
+            $("#clasp-header").html(htmlFile);
+            $("#clasp-header").find("#nav-link-contact").addClass("link--highlight");
+        });
+    </script>
   </head>
 
   <body>
     <div class="container">
-    <header class="banner" role="banner">
-      <div class="banner-wrapper">
-
-        <a href="index.html">
-          <img src="images/logo.svg" onerror="this.src= images/logo.png" alt="CLASP: Computational Linguistics and Speech Processing Lab" class="logo" />
-        </a>
-
-        <nav class="main-nav" role="navigation">
-          <a href="javascript:void(0)" id="js-banner-mobile-menu" class="banner-mobile-menu">MENU</a>
-
-          <ul id="js-banner-menu" class="banner-menu show">
-            <li class="nav-link"><a class="" href="./index.html"><i class="fa fa-home">&nbsp;</i>home</a></li>
-            <li class="nav-link"><a class="" href="people.html"><i class="fa fa-users">&nbsp;</i>people</a></li>
-            <li class="nav-link"><a class="" href="publications.html"><i class="fa fa-book">&nbsp;</i>publications</a></li>
-            <li class="nav-link"><a class="" href="news.html"><i class="fa fa-file-text">&nbsp;</i>news</a></li>
-            <li class="nav-link"><a class=" link--highlight " href="contact.html"><i class="fa fa-envelope">&nbsp;</i>contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <header id="clasp-header" class="banner" role="banner"></header>
 
   <div class="content">
-    <h1><i class="fa fa-envelope">&nbsp;</i>Contact</h1>
+    <h1><i class="fa fa-envelope">&nbsp;</i>contact</h1>
 
     <section class="two-col">
       <h5>Cecilia Ovesdotter Alm</h5>
@@ -54,6 +41,8 @@
       <em>Phone:</em> (585) 475-4052 <br/>
       <em>Email:</em> <a href="mailto:emilypx@rit.edu">emilypx@rit.edu</a> <br/>
     </section>
+
+    <section>Please report any errors on this website to <b>Benjamin Meyers</b>: <a href="mailto:bsm9339@rit.edu">bsm9339@rit.edu</a>.</section>
   </div>
 
     </div>

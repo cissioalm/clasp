@@ -13,30 +13,16 @@
     <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/4bf3214f2e.js"></script>
     <script src="javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.get("assets/header.html", function(htmlFile) {
+            $("#clasp-header").html(htmlFile);
+        });
+    </script>
   </head>
 
   <body>
     <div class="container">
-    <header class="banner" role="banner">
-      <div class="banner-wrapper">
-
-        <a href="index.html">
-          <img src="images/logo.svg" onerror="this.src= images/logo.png" alt="CLASP: Computational Linguistics and Speech Processing Lab" class="logo" />
-        </a>
-
-        <nav class="main-nav" role="navigation">
-          <a href="javascript:void(0)" id="js-banner-mobile-menu" class="banner-mobile-menu">MENU</a>
-
-          <ul id="js-banner-menu" class="banner-menu show">
-            <li class="nav-link"><a class="" href="./index.html"><i class="fa fa-home">&nbsp;</i>home</a></li>
-            <li class="nav-link"><a class="" href="people.html"><i class="fa fa-users">&nbsp;</i>people</a></li>
-            <li class="nav-link"><a class="" href="publications.html"><i class="fa fa-book">&nbsp;</i>publications</a></li>
-            <li class="nav-link"><a class="" href="news.html"><i class="fa fa-file-text">&nbsp;</i>news</a></li>
-            <li class="nav-link"><a class="" href="contact.html"><i class="fa fa-envelope">&nbsp;</i>contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <header id="clasp-header" class="banner" role="banner"></header>
 
   <div class="content">
 
@@ -53,7 +39,7 @@
 
       <hr>
 
-      <h2><i class="fa fa-users">&nbsp;</i>About</h2>
+      <h2><i class="fa fa-users">&nbsp;</i>about</h2>
 
       <p>The Computational Linguistics and Speech Processing (CLASP) lab at RIT is dedicated to advancing applied and theoretical research involving text, speech, and multimodal data. The lab focuses on clinical, interactive, and social media problems, and we collaborate closely with other research groups on campus. Recently graduated former students have gone on to jobs in software and user interface development, game development, human factors, including employers such as Qualcomm, Thompson Reuters, Reactive (Japan), UL-Wiklund, SpaceX, Athena Health, Kensho, Apple, Knewton, Microsoft, Space X, IBM, and Pronology. We welcome curious and engaged RIT/NTID students from different disciplines to join us. For more information, please contact the Co-Directors. Location: LBR-A220.</p>
 
@@ -62,7 +48,7 @@
     <section class="minor-col">
       <hr class="mobile-block">
 
-      <h2><i class="fa fa-newspaper-o">&nbsp;</i>News</h2>
+      <h2><i class="fa fa-newspaper-o">&nbsp;</i>news</h2>
 
       <article id="js-news">
       </article>

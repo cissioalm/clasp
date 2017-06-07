@@ -13,45 +13,43 @@
     <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/4bf3214f2e.js"></script>
     <script src="javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.get("assets/header.html", function(htmlFile) {
+            $("#clasp-header").html(htmlFile);
+            $("#clasp-header").find("#nav-link-news").addClass("link--highlight");
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.getJSON("https://www.googleapis.com/calendar/v3/calendars/g.rit.edu_aoem6sdcvnkmouv70abg7k89m8%40group.calendar.google.com/events?fields=items(description%2Cend(dateTime)%2Clocation%2Cstart(dateTime)%2Csummary)&key=AIzaSyCl8H2wwWLzk520LFa0rntCBnTh9Abh8HQ", function( data ) {
+                $.each(data, function(key, val) {
+                    confirm(key + " " + val);
+                });
+            });
+        });
+    </script>
   </head>
 
   <body>
     <div class="container">
-    <header class="banner" role="banner">
-      <div class="banner-wrapper">
-
-        <a href="index.html">
-          <img src="images/logo.svg" onerror="this.src= images/logo.png" alt="CLASP: Computational Linguistics and Speech Processing Lab" class="logo" />
-        </a>
-
-        <nav class="main-nav" role="navigation">
-          <a href="javascript:void(0)" id="js-banner-mobile-menu" class="banner-mobile-menu">MENU</a>
-
-          <ul id="js-banner-menu" class="banner-menu show">
-            <li class="nav-link"><a class="" href="./index.html"><i class="fa fa-home">&nbsp;</i>home</a></li>
-            <li class="nav-link"><a class="" href="people.html"><i class="fa fa-users">&nbsp;</i>people</a></li>
-            <li class="nav-link"><a class="" href="publications.html"><i class="fa fa-book">&nbsp;</i>publications</a></li>
-            <li class="nav-link"><a class=" link--highlight " href="news.html"><i class="fa fa-file-text">&nbsp;</i>news</a></li>
-            <li class="nav-link"><a class="" href="contact.html"><i class="fa fa-envelope">&nbsp;</i>contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <header id="clasp-header" class="banner" role="banner"></header>
 
   <div class="content">
 
     <section class="news">
-      <h1><i class="fa fa-newspaper-o">&nbsp;</i>News</h1>
+      <h1><i class="fa fa-newspaper-o">&nbsp;</i>news</h1>
 
       <article id="article-46">
-        <p class="date">05-015-2017</p>
+        <p class="date">05-15-2017</p>
         <h3 class="title">
-          Emily Prud’hommeaux is Co-PI on a grant from the Hearing Health Foundation with Joe Bochner (NTID), VInce Samar (NTID), and Matt Huenerfauth (GCCIS).
+          Emily Prud'hommeaux is Co-PI on a grant from the Hearing Health Foundation with Joe Bochner (NTID), VInce Samar (NTID), and Matt Huenerfauth (GCCIS).
         </h3>
         <p>
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-45">
         <p class="date">05-05-2017</p>
         <h3 class="title">
@@ -61,6 +59,8 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-44">
         <p class="date">05-05-2017</p>
         <h3 class="title">
@@ -70,6 +70,8 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-43">
         <p class="date">04-18-2017</p>
         <h3 class="title">
@@ -80,16 +82,20 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-42">
         <p class="date">04-07-2017</p>
         <h3 class="title">
           Emily Prud'hommeaux and Douglas Gliner are co-authors for a paper accepted at ACL 2017.
         </h3>
         <p>
-          <b>Emily Prud’hommeaux</b>, Jan van Santen, and <b>Douglas Gliner</b>. Vector space models for evaluating semantic fluency in autism. Proceedings of the 2017 Meeting of the Association for Computational Linguistics (ACL). Accepted.
+          <b>Emily Prud'hommeaux</b>, Jan van Santen, and <b>Douglas Gliner</b>. Vector space models for evaluating semantic fluency in autism. Proceedings of the 2017 Meeting of the Association for Computational Linguistics (ACL). Accepted.
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-41">
         <p class="date">03-08-2017</p>
         <h3 class="title">
@@ -100,6 +106,8 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-40">
         <p class="date">02-10-2017</p>
         <h3 class="title">
@@ -109,6 +117,8 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-39">
         <p class="date">02-05-2017</p>
         <h3 class="title">
@@ -119,6 +129,8 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-38">
         <p class="date">01-12-2017</p>
         <h3 class="title">
@@ -129,6 +141,8 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-37">
         <p class="date">12-12-2016</p>
         <h3 class="title">
@@ -139,6 +153,8 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-36">
         <p class="date">9-23-2016</p>
         <h3 class="title">
@@ -149,16 +165,20 @@
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-35">
         <p class="date">9-2-2016</p>
         <h3 class="title">
-          Congratulations to Emily Prud’hommeaux for being awarded an AdvanceRIT Connect grant.
+          Congratulations to Emily Prud'hommeaux for being awarded an AdvanceRIT Connect grant.
         </h3>
         <p>
           <a href="https://nsfadvance.rit.edu/fundingOpportunities/connectGrants.php" target="_blank">Development of Categorical Perception in Sign and Speech: Preliminary Investigations</a><br>PI Emily Prud'hommeaux, Co-PIs Joseph Bochner, Matt Huenerfauth, and Vince Samar
         </p>
       </article>
 
+      <hr>
+      
       <article id="article-34">
         <p class="date">8-30-2016</p>
         <h3 class="title">
@@ -191,7 +211,7 @@
         <p>
         <a href="http://cs.rit.edu/~reu/participants.html">Meet this year's cohort on our website</a>.
         </p>
-        <img float="left" width="100px" src="images/nsf-logo.jpg" />
+        <img float="left" width="100px" src="images/logos/nsf-logo.png" />
       </article>
 
       <hr>
@@ -272,7 +292,7 @@
       <article id="article-24">
         <p class="date">2-17-2016</p>
         <h3 class="title">
-          Congratulation to Will Paul on being notified that he will be recognized among RIT’s 2016 Outstanding Undergraduate Scholars.
+          Congratulation to Will Paul on being notified that he will be recognized among RIT's 2016 Outstanding Undergraduate Scholars.
         </h3>
       </article>
 
@@ -549,7 +569,7 @@
     <section class="calendar">
       <hr class="mobile-block">
 
-      <h1><i class="fa fa-calendar">&nbsp;</i>Events</h1>
+      <h1><i class="fa fa-calendar">&nbsp;</i>events</h1>
       <div class="iframe-container">
         <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=g.rit.edu_aoem6sdcvnkmouv70abg7k89m8%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FNew_York" style=" border-width:0" frameborder="0" scrolling="no"></iframe>
       </div>

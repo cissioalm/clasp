@@ -22,35 +22,41 @@
         $temp.remove();
       }
     </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $(".tag").each(function() {
+              $(this).attr('title', 'Click to see related Publications');
+              $(this).on('click', function() {
+                  j = $("#js-text-filter");
+                  j.focus();
+                  j.val($(this).text());
+                  e = $.Event('keyup');
+                  e.keyCode= 13; // enter
+                  j.trigger(e);
+              });
+          });
+          /*$("#nav-link-publications").addClass("link--highlight");*/
+      });
+    </script>
+    <script type="text/javascript">
+        $(".tag").attr('title', 'Click to see related Publications');
+    </script>
+    <script type="text/javascript">
+        $.get("assets/header.html", function(htmlFile) {
+            $("#clasp-header").html(htmlFile);
+            $("#clasp-header").find("#nav-link-publications").addClass("link--highlight");
+        });
+    </script>
   </head>
 
   <body>
     <div class="container">
-    <header class="banner" role="banner">
-      <div class="banner-wrapper">
-
-        <a href="index.html">
-          <img src="images/logo.svg" onerror="this.src= images/logo.png" alt="CLASP: Computational Linguistics and Speech Processing Lab" class="logo" />
-        </a>
-
-        <nav class="main-nav" role="navigation">
-          <a href="javascript:void(0)" id="js-banner-mobile-menu" class="banner-mobile-menu">MENU</a>
-
-          <ul id="js-banner-menu" class="banner-menu show">
-            <li class="nav-link"><a class="" href="./index.html"><i class="fa fa-home">&nbsp;</i>home</a></li>
-            <li class="nav-link"><a class="" href="people.html"><i class="fa fa-users">&nbsp;</i>people</a></li>
-            <li class="nav-link"><a class=" link--highlight " href="publications.html"><i class="fa fa-book">&nbsp;</i>publications</a></li>
-            <li class="nav-link"><a class="" href="news.html"><i class="fa fa-file-text">&nbsp;</i>news</a></li>
-            <li class="nav-link"><a class="" href="contact.html"><i class="fa fa-envelope">&nbsp;</i>contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      <header id="clasp-header" class="banner" role="banner"></header>
 
 
   <div class="content">
 
-  <h1><i class="fa fa-book">&nbsp;</i>Publications</h1>
+  <h1><i class="fa fa-book">&nbsp;</i>publications</h1>
 
   <input type="text" placeholder="Filter by term, e.g. semantics or IEEE..." class="filter" id="js-text-filter">
 
@@ -71,876 +77,723 @@
 
     <tbody>
       <tr>
-        <!-- YEAR -->
-        <td>2017</td>
-        <!-- PDF & BIBTEX -->
-        <td></td>
-        <td>
-          <!-- TITLE -->
-          <p><em>Natural language insights from code reviews that missed a vulnerability: A large scale study of Chromium.</em></p>
-          <!-- AUTHORS -->
+        <td class="year">2017</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="javascript:void(0);" target="_blank" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Munaiah2017');" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Munaiah2017"></p>
+        </td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Natural language insights from code reviews that missed a vulnerability: A large scale study of Chromium.</p>
           <p>Nuthan Munaiah, <b>Benjamin S. Meyers</b>, <b>Cecilia O. Alm</b>, Andrew Meneely, Pradeep K. Murukannaiah, <b>Emily Prud'hommeaux</b>, Josephine Wolff, and Yang Yu.</p>
-          <!-- DETAILS -->
-          <p>Proceedings of the 9th International Symposium for Engineering Secure Software and Systems (ESSoS). Accepted.</p>
+          <p>ESSoS '17: Proceedings of the 9th International Symposium for Engineering Secure Software and Systems. Accepted.</p>
         </td>
-        <!-- CATEGORIES -->
-        <td><span>Software, Discourse, Cybersecurity</span></td>
+        <td><p class="tag tag-cybersecurity">&nbsp;Cybersecurity</p><p class="tag tag-discourse">&nbsp;Discourse</p><p class="tag tag-software">&nbsp;Software</p></td>
       </tr>
 
-      <tr>
-        <!-- YEAR -->
-        <td>2017</td>
-        <!-- PDF & BIBTEX -->
-        <td></td>
-        <td>
-          <!-- TITLE -->
-          <p><em>Vector space models for evaluating semantic fluency in autism.</em></p>
-          <!-- AUTHORS -->
+      <tr id="paper0047">
+        <td class="year">2017</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="javascript:void(0);" target="_blank" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Prud2017');" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Prud2017"></p>
+        </td>
+        <td> <!-- TITLE, AUTHOR, DETAILS -->
+          <p>Vector space models for evaluating semantic fluency in autism.</p>
           <p><b>Emily Prud'hommeaux</b>, Jan van Santen, and <b>Douglas Gliner</b>.</p>
-          <!-- DETAILS -->
-          <p>Proceedings of the 2017 Meeting for the Association for Computational Linguistics (ACL). Accepted.</p>
+          <p>ACL '17: Proceedings of the 2017 Meeting for the Association for Computational Linguistics. Accepted.</p>
         </td>
-        <!-- CATEGORIES -->
-        <td><span>Medical, Semantics</span></td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <!-- YEAR -->
-        <td>2017</td>
-        <td>
-          <!-- PDF -->
-          <br><p><a href="http://www.aclweb.org/anthology/W/W17/W17-1801.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <!-- BIBTEX -->
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Calderwood2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
-          <p hidden id="Calderwood2017">@article{Calderwood:2017, title={Understanding the Semantics of Narratives of Interpersonal Violence through Reader Annotations and Physiological Reactions}, author={Calderwood, Alexander and Pruett, Elizabeth A and Ptucha, Raymond and Homan, Christopher M and Alm, Cecilia O}, journal={SemBEaR 2017}, pages={1}, year={2017}}</p>
+      <tr id="paper0046">
+        <td class="year">2017</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W17/W17-1801.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Calderwood2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Calderwood2017">@inproceedings{Calderwood:2017, title={Understanding the Semantics of Narratives of Interpersonal Violence through Reader Annotations and Physiological Reactions}, author={Calderwood, Alexander and Pruett, Elizabeth A and Ptucha, Raymond and Homan, Christopher M and Alm, Cecilia O}, journal={SemBEaR 2017}, pages={1}, year={2017}}</p>
         </td>
-        <td>
-          <!-- TITLE -->
-          <p><em>Understanding the semantics of narratives of interpersonal violence through reader annotations and physiological reactions.</em></p>
-          <!-- AUTHORS -->
-          <p><b>Alexander Calderwood</b>, <b>Elizabeth A. Pruett</b>, Raymond Ptucha, Christopher Homan and <b>Cecilia Ovesdotter Alm</b>.</p>
-          <!-- DETAILS -->
-          <p>Proceedings of the Workshop on Computational Semantics beyond Events and Roles (at EACL 2017).</p>
+        <td> <!-- TITLE, AUTHOR, DETAILS -->
+          <p>Understanding the semantics of narratives of interpersonal violence through reader annotations and physiological reactions.</p>
+          <p><b>Alexander Calderwood</b>, <b>Elizabeth A. Pruett</b>, Raymond Ptucha, Christopher Homan, and <b>Cecilia O. Alm</b>.</p>
+          <p>SemBEaR at EACL '17: Proceedings of the Workshop on Computational Semantics beyond Events and Roles.</p>
         </td>
-        <!-- CATEGORIES -->
-        <td><span>Multimodal, Semantics</span></td>
+        <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2017</td>
-        <td>
-          <br>
-          <p><a href="http://delivery.acm.org/10.1145/3040000/3038536/p25-edwards.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br>
-          <p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Edwards2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
-        </td>
-        <td>
-          <p>
-            <em>Sensor-based methodological observations for studying online learning.</em>
-          </p>
-          <p>
-            Ashley Edwards, Anthony Massicci, Srinivas Sridharan, Joe Geigel, Linwei Wang,  Reynold Bailey, and <b>Cecilia O. Alm</b>.
-          </p>
-          <p>
-            Proceedings of the SmartLearn Workshop: Intelligent Interfaces for Ubiquitous and Smart Learning (at IUI 2017).
-          </p>
+      <tr id="paper0045">
+        <td class="year">2017</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://delivery.acm.org/10.1145/3040000/3038536/p25-edwards.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Edwards2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Edwards2017">@inproceedings{Edwards:2017, title={Sensor-based Methodological Observations for Studying Online Learning}, author={Edwards, Ashley A and Massicci, Anthony and Sridharan, Srinivas and Geigel, Joe and Wang, Linwei and Bailey, Reynold and Alm, Cecilia Ovesdotter}, booktitle={Proceedings of the 2017 ACM Workshop on Intelligent Interfaces for Ubiquitous and Smart Learning}, pages={25--30}, year={2017}, organization={ACM}}</p>
         </td>
-        <td><span>Multimodal</span></td>
+        <td> <!-- TITLE, AUTHOR, DETAILS -->
+          <p>Sensor-based methodological observations for studying online learning.</p>
+          <p>Ashley Edwards, Anthony Massicci, Srinivas Sridharan, Joe Geigel, Linwei Wang, Reynold Bailey, and <b>Cecilia O. Alm</b>.</p>
+          <p>IUI '17: Proceedings of the SmartLearn Workshop: Intelligent Interfaces for Ubiquitous and Smart Learning.</p>
+        </td>
+        <td><p class="tag tag-multimodal">&nbsp;Multimodal</p></td>
       </tr>
 
-      <tr>
-        <td>2017</td>
-        <td>
-          <br>
-          <p><a href="https://www.cs.utexas.edu/~vsub/pdf/wacv-semantic-text.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br>
-          <p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Sah2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
-        </td>
-        <td>
-          <p>
-            <em>Semantic text summarization of long videos.</em>
-          </p>
-          <p>
-            Shagan Sah, Sourabh Kulhare, Allison Gray, Subhashini Venugopalan, <b>Emily Prud’hommeaux</b>, and Raymond Ptucha.
-          </p>
-          <p>
-            Proceedings of the IEEE Winter Conference on Applications of Computer Vision. Accepted.
-          </p>
+      <tr id="paper0044">
+        <td class="year">2017</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="https://www.cs.utexas.edu/~vsub/pdf/wacv-semantic-text.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Sah2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Sah2017">@article{Sah:2017, title={Semantic Text Summarization of Long Videos}, author={Sah, Shagan and Kulhare, Sourabh and Gray, Allison and Venugopalan, Subhashini and Prud'hommeaux, Emily and Ptucha, Raymond}, organization="IEEE"}</p>
         </td>
-        <td><span>Image processing, Multimodal</span></td>
+        <td> <!-- TITLE, AUTHOR, DETAILS -->
+          <p>Semantic text summarization of long videos.</p>
+          <p>Shagan Sah, Sourabh Kulhare, Allison Gray, Subhashini Venugopalan, <b>Emily Prud'hommeaux</b>, and Raymond Ptucha.</p>
+          <p>WACV at IEEE '17: Proceedings of the IEEE Winter Conference on Applications of Computer Vision.</p>
+        </td>
+        <td><p class="tag tag-imageprocessing">&nbsp;Images</p><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2017</td>
-        <td></td>
-        <td>
-          <p>
-            <a href="http://aaai.org/ocs/index.php/WS/AAAIW17/paper/view/15116/14725" target="_blank" title="Link to pdf.">
-              Using co-captured face, gaze and verbal reactions to images of varying emotional content for analysis and semantic alignment.
-            </a>
-          </p>
-          <p>
-            <b>Aliya Gangji</b>, <b>Trevor Walden</b>, <b>Emily Prud'hommeaux</b>, Reynold Bailey, and <b>Cecilia Ovesdotter Alm</b>.
-          </p>
-          <p>
-            Proceddings of Human-Aware AI Workshop at AAAI 2017. Accepted.
-          </p>
+      <tr id="paper0043">
+        <td class="year">2017</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://aaai.org/ocs/index.php/WS/AAAIW17/paper/view/15116/14725" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Gangji2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Gangji2016">@inproceedings{Gangji:2016, title={Using co-captured face, gaze and verbal reactions to images of varying emotional content for analysis and semantic alignment}, author={Gangji, Aliya and Walden, Trevor and Prud'hommeaux, Emily and Bailey, Reynold and Alm, Cecilia O}, booktitle={Proceedings of the Human-Aware AI Workshop at the Conference for the Association for the Advancement of Artificial Intelligence}, year={2017}}</p>
         </td>
-        <td><span>Semantics, Affect</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Using co-captured face, gaze and verbal reactions to images of varying emotional content for analysis and semantic alignment.</p>
+          <p><b>Aliya Gangji</b>, <b>Trevor Walden</b>, <b>Emily Prud'hommeaux</b>, Reynold Bailey, and <b>Cecilia O. Alm</b>.</p>
+          <p>HAAI at AAAI '17: Proceedings of Human-Aware AI Workshop at the Conference for the Association for the Advancement of Artificial Intelligence.</p>
+        </td>
+        <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-          <p>
-            <a href="https://aclweb.org/anthology/C/C16/C16-1083.pdf" target="_blank" title="PDF to the paper">
-              Analyzing gender bias in student evaluations.
-            </a>
-          </p>
-          <p>
-            <b>Andamlak Terkik</b>, <b>Emily Prud'hommeaux</b>, <b>Cecilia Ovesdotter Alm</b>, Christopher Homan, and Scott Franklin.
-          </p>
-          <p>
-            Proceedings of the 26th International Conference on Computational Linguistics.
-          </p>
+      <tr id="paper0042">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="https://aclweb.org/anthology/C/C16/C16-1083.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Terkik2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Terkik2016">@inproceedings{Terkik:2016, title={Analyzing Gender Bias in Student Evaluations}, author={Terkik, Andamlak and Alm, Cecilia O and Homan, Christopher M and Franklin, Scott}, booktitle={Proceedings of the 26th International Conference on Computational Linguistics}, year={2016}}</p>
         </td>
-        <td><span>Semantics, Affect</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Analyzing gender bias in student evaluations.</p>
+          <p><b>Andamlak Terkik</b>, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, Christopher Homan, and Scott Franklin.</p>
+          <p>COLING '16: Proceedings of the 26th International Conference on Computational Linguistics.</p>
+        </td>
+        <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-          <p>
-            <a href="http://rdcu.be/jXEk" target="_blank" title="PDF to the paper">
-              Intelligent medical image grouping through interactive learning.
-            </a>
-          </p>
-          <p>
-	    Xuan Guo, Qi Yu, Rui Li, <b>Cecilia Ovesdotter</b> Alm, Cara Calvelli, Pengcheng Shi, and Anne Haake.
-          </p>
-          <p>
-            Int J Data Sci Anal (2016). doi:10.1007/s41060-016-0021-2. Springer Nature.
-          </p>
+      <tr id="paper0041">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://rdcu.be/jXEk" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Guo2016b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Guo2016b">@article{Guo:2016, title={Intelligent medical image grouping through interactive learning}, author={Guo, Xuan and Yu, Qi and Li, Rui and Alm, Cecilia Ovesdotter and Calvelli, Cara and Shi, Pengcheng and Haake, Anne}, journal={International Journal of Data Science and Analytics}, volume={2}, number={3-4}, pages={95--105}, year={2016}, publisher={Springer}}</p>
         </td>
-        <td><span>Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Intelligent medical image grouping through interactive learning.</p>
+          <p>Xuan Guo, Qi Yu, Rui Li, <b>Cecilia O. Alm</b>, Cara Calvelli, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>International Journal of Data Science and Analytics.</p>
+        </td>
+        <td><p class="tag tag-imageprocessing">&nbsp;Images</p><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-          <p>
-            <a href="https://www.aclweb.org/anthology/P/P16/P16-1099.pdf" target="_blank" title="PDF to the paper">
-              Understanding discourse on work and job-related well-being in public social media.
-            </a>
-          </p>
-          <p>
-            <b>Tong Liu</b>, Christopher Homan, <b>Cecilia Ovesdotter Alm</b>, Megan Lytle, Ann Marie White, and Henry Kautz.
-          </p>
-          <p>
-            Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (ACL) 2016.
-          </p>
+      <tr id="paper0040">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="https://www.aclweb.org/anthology/P/P16/P16-1099.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Liu2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Liu2016">@inproceedings{Liu:2016, title={Understanding discourse on work and job-related well-being in public social media}, author={Liu, Tong and Homan, Christopher M and Alm, Cecilia Ovesdotter and White, Ann Marie and Lytle, Megan C and Kautz, Henry A}, booktitle={Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics}, volume={1}, pages={1044--1053}, year={2016}}</p>
         </td>
-        <td><span>Social Media, Semantics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Understanding discourse on work and job-related well-being in public social media.</p>
+          <p><b>Tong Liu</b>, Christopher Homan, <b>Cecilia O. Alm</b>, Megan Lytle, Ann Marie White, and Henry Kautz.</p>
+          <p>ACL '16: Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.</p>
+        </td>
+        <td><p class="tag tag-discourse">&nbsp;Discourse</p><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-          <p>
-            <a href="http://www.sciencedirect.com/science/article/pii/S1077314216000734" target="_blank" title="PDF to the paper">
-              Modeling eye movement patterns to characterize perceptual skills in image-based diagnostic reasoning processes.
-            </a>
-          </p>
-          <p>
-            Rui Li, Pengcheng Shi, Jeff Pelz, <b>Cecilia Ovesdotter Alm</b>, and Anne R. Haake.
-          </p>
-          <p>
-            Computer Vision and Image Understanding, 151: 138-152.
-          </p>
+      <tr id="paper0039">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.sciencedirect.com/science/article/pii/S1077314216000734" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Li2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Li2016">@article{Li:2016, title={Modeling eye movement patterns to characterize perceptual skill in image-based diagnostic reasoning processes}, author={Li, Rui and Shi, Pengcheng and Pelz, Jeff and Alm, Cecilia O and Haake, Anne R}, journal={Computer Vision and Image Understanding}, volume={151}, pages={138--152}, year={2016}, publisher={Elsevier}}</p>
         </td>
-        <td><span>Eye-tracking, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Modeling eye movement patterns to characterize perceptual skills in image-based diagnostic reasoning processes.</p>
+          <p>Rui Li, Pengcheng Shi, Jeff Pelz, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
+          <p>Computer Vision and Image Understanding, 151: 138-152.</p>
+        </td>
+        <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-          <p>
-            <a href="http://www.aclweb.org/anthology/W/W16/W16-0309.pdf" target="_blank" title="PDF to the paper">
-              Generating clinically relevant texts: A case study on life-changing events.
-            </a>
-          </p>
-          <p>
-            <b>Mayuresh Oak</b>, <b>Anil K. Behera</b>, <b>Titus P. Thomas</b>, <b>Cecilia Ovesdotter Alm</b>, <b>Emily Prud’hommeaux</b>, Christopher Homan, and <b>Raymond Ptucha</b>.
-          </p>
-          <p>
-            Proceedings of the Third Workshop on Computational Linguistics and Clinical Psychology.
-          </p>
+      <tr id="paper0038">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W16/W16-0309.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Oak2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Oak2016">@inproceedings{Oak:2016, title={Generating Clinically Relevant Texts: A Case Study on Life-changing Events}, author={Oak, Mayuresh and Behera, Anil K and Thomas, Titus P and Alm, Cecilia Ovesdotter and Prud'hommeaux, Emily and Homan, Christopher and Ptucha, Raymond}, booktitle={Proceedings of the 3rd Workshop on Computational Linguistics and Clinical Psychology}, year={2016}}</p>
         </td>
-        <td><span>Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Generating clinically relevant texts: A case study on life-changing events.</p>
+          <p><b>Mayuresh Oak</b>, <b>Anil K. Behera</b>, <b>Titus P. Thomas</b>, <b>Cecilia O. Alm</b>, <b>Emily Prud'hommeaux</b>, Christopher Homan, and Raymond Ptucha.</p>
+          <p>Proceedings of the 3rd Workshop on Computational Linguistics and Clinical Psychology.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-          <p>
-          <a href="http://www.aclweb.org/anthology/W/W16/W16-0302.pdf" target="_blank" title="PDF to the paper">
-            Towards early dementia detection: fusing linguistic and non-linguistic clinical data.
-          </a>
-          </p>
-          <p>
-            <b>Joseph Bullard</b>, <b>Cecilia Ovesdotter Alm</b>, Xumin Liu, Ruben A. Proa&ntilde;o, and Qi Yu.
-          </p>
-          <p>
-            Proceedings of the Third Workshop on Computational Linguistics and Clinical Psychology.
-          </p>
+      <tr id="paper0037">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W16/W16-0302.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Bullard2016">@inproceedings{Bullard:2016, title={Towards Early Dementia Detection: Fusing Linguistic and Non-Linguistic Clinical Data}, author={Bullard, Joseph and Alm, Cecilia Ovesdotter and Liu, Xumin and Proano, Rub{\'e}n A and Yu, Qi}}, booktitle={Proceedings of the 3rd Workshop on Computational Linguistics and Clinical Psychology}, year={2016}</p>
         </td>
-        <td><span>Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Towards early dementia detection: fusing linguistic and non-linguistic clinical data.</p>
+          <p><b>Joseph Bullard</b>, <b>Cecilia O. Alm</b>, Xumin Liu, Rub&eacute;n Proa&ntilde;o, and Qi Yu.</p>
+          <p>Proceedings of the 3rd Workshop on Computational Linguistics and Clinical Psychology.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-        <p>
-        <a href="http://link.springer.com/chapter/10.1007%2F978-3-319-31753-3_38" target="_blank" title="PDF to the paper">
-	    An expert-in-the-loop paradigm for learning medical image grouping.
-	    </a>
-        </p>
-        <p>
-        Xuan Guo, Qi Yu, Rui Li, <b>Cecilia Ovesdotter Alm</b>, Cara Calvelli, Pengcheng Shi, and Anne R. Haake.
-        <p>
-          Proceedings of Pacific Asia Knowledge Discovery and Data Mining Conference (PAKDD) 2016.
-        </p>
+      <tr id="paper0036">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://link.springer.com/chapter/10.1007%2F978-3-319-31753-3_38" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Guo2016a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Guo2016a">@inproceedings{Guo:2016, title={An expert-in-the-loop paradigm for learning medical image grouping}, author={Guo, Xuan and Yu, Qi and Li, Rui and Alm, Cecilia Ovesdotter and Calvelli, Cara and Shi, Pengcheng and Haake, Anne}, booktitle={Pacific-Asia Conference on Knowledge Discovery and Data Mining}, pages={477--488}, year={2016}, organization={Springer}}</p>
         </td>
-        <td><span>Multimodal</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>An expert-in-the-loop paradigm for learning medical image grouping.</p>
+          <p>Xuan Guo, Qi Yu, Rui Li, <b>Cecilia O. Alm</b>, Cara Calvelli, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>PAKDD '16: Proceedings of Pacific Asia Knowledge Discovery and Data Mining Conference.</p>
+        </td>
+        <td><p class="tag tag-multimodal">&nbsp;Multimodal</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-        <p>
-        <a href="http://onlinelibrary.wiley.com/doi/10.1111/lnc3.12171/abstract" target="_blank" title="PDF of the paper">
-          Natural language as sensor in human-centered computing: Clinical contexts as use cases.
-        </a>
-        </p>
-        <p>
-        <b>Cecilia Ovesdotter Alm.</b>
-        </p>
-        <p>
-          Language &amp; Linguistics Compass: Computational &amp; Mathematical, 10(3): 105-119.
-        </p>
+      <tr id="paper0035">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://onlinelibrary.wiley.com/doi/10.1111/lnc3.12171/abstract" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Alm2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Alm2016">@article{Alm:2016, title={Language as Sensor in Human-Centered Computing: Clinical Contexts as Use Cases}, author={Alm, Cecilia Ovesdotter}, journal={Language and Linguistics Compass}, volume={10}, number={3}, pages={105--119}, year={2016}, publisher={Wiley Online Library}}</p>
         </td>
-        <td><span>Semantics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+        <p>Natural language as sensor in human-centered computing: Clinical contexts as use cases.</p>
+          <p><b>Cecilia O. Alm.</b></p>
+          <p>Language &amp; Linguistics Compass: Computational &amp; Mathematical, 10(3): 105-119.</p>
+        </td>
+        <td><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2016</td>
-        <td></td>
-        <td>
-        <p>
-        <a href="http://dl.acm.org/citation.cfm?id=2857542" target="_blank" title="PDF of the paper">
-          Fusing eye movements and observer narratives for expert-driven image-region annotations.
-        </a>
-        </p>
-        <p>
-          <b>Preethi Vaidyanathan</b>, Jeff B. Pelz, <b>Emily Prud’hommeaux, Cecilia Ovesdotter Alm</b>, and Anne R. Haake.
-        <p>
-          ETRA '16: Proceedings of the Symposium on Eye Tracking Research and Applications Publisher: ACM. <strong>Best paper award.</strong>
-        </p>
+      <tr id="paper0034">
+        <td class="year">2016</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2857542" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Vaidyanathan2016">@inproceedings{Vaidyanathan:2016, title={Fusing eye movements and observer narratives for expert-driven image-region annotations}, author={Vaidyanathan, Preethi and Prud'hommeaux, Emily and Pelz, Jeff B and Alm, Cecilia Ovesdotter and Haake, Anne R}, booktitle={Proceedings of the Ninth Biennial ACM Symposium on Eye Tracking Research \& Applications}, pages={27--34}, year={2016}, organization={ACM}}</p>
         </td>
-        <td><span>Eye-tracking, Semantics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Fusing eye movements and observer narratives for expert-driven image-region annotations.</p>
+          <p><b>Preethi Vaidyanathan</b>, Jeff B. Pelz, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
+          <p>ETRA '16: Proceedings of the Symposium on Eye Tracking Research and Applications. <strong>Best paper award.</strong></p>
+        </td>
+        <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.aclweb.org/anthology/D/D15/D15-1309.pdf" target="_blank" title="PDF of the paper">
-          An analysis of domestic abuse discourse on Reddit.
-        </a></p>
-        <p>
-        <b>Nicolas Schrading, Cecilia Ovesdotter Alm,</b> Ray Ptucha, and Christopher M. Homan.
-        <p>
-        Proceedings of the Conference on Empirical Methods in Natural Language Processing, Lisbon, Portugal.
-        </p>
+      <tr id="paper0033">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/D/D15/D15-1309.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Schrading2015b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Schrading2015b">@inproceedings{Schrading:2015, title={An analysis of domestic abuse discourse on reddit}, author={Schrading, Nicolas and Alm, Cecilia O and Ptucha, Ray and Homan, Christopher M}, year={2015}, booktitle={Proceedings of the Conference on Empirical Methods in Natural Language Processing}</p>
         </td>
-        <td><span>Social Media, Semantics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>An analysis of domestic abuse discourse on Reddit.</p>
+          <p><b>Nicolas Schrading</b>, <b>Cecilia O. Alm</b>, Raymond Ptucha, and Christopher M. Homan.</p>
+          <p>EMNLP '15: Proceedings of the Conference on Empirical Methods in Natural Language Processing.</p>
+        </td>
+        <td><p class="tag tag-discourse">&nbsp;Discourse</p><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p>
-          <a href="http://www.aclweb.org/anthology/W/W15/W15-2802.pdf" target="_blank" title="PDF of the paper">
-            Computational integration of human vision and natural language through bitext alignment.
-          </a>
-        </p>
-        <p>
-          <b>Preethi Vaidyanathan, Emily Prud’hommeaux, Cecilia O. Alm,</b> and Jeff B. Pelz.
-        <p>
-        Proceedings of the Workshop on Vision and Language at the Conference on Empirical Methods in Natural Language Processing, Lisbon, Portugal.
-        </p>
+      <tr id="paper0032">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W15/W15-2802.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2015b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Vaidyanathan2015b">@inproceedings{Vaidyanathan:2015, title={Computational integration of human vision and natural language through bitext alignment}, author={Vaidyanathan, Preethi and Prud'hommeaux, Emily and Alm, Cecilia O and Pelz, Jeff B}, booktitle={Proceedings of the Workshop on Vision and Language at the Conference on Empirical Methods in Natual Language Processing}, year={2015}}</p>
         </td>
-        <td><span>Semantics, Eye-tracking</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Computational integration of human vision and natural language through bitext alignment.</p>
+          <p><b>Preethi Vaidyanathan</b>, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, and Jeff B. Pelz.</p>
+          <p>iV&amp;L at EMNLP '15: Proceedings of the Workshop on Vision and Language at the Conference on Empirical Methods in Natural Language Processing.</p>
+        </td>
+        <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p>
-          <a href="http://www.isca-speech.org/archive/avsp15/papers/av15_196.pdf" target="_blank" title="PDF of the paper">
-            Face-speech sensor fusion for non-invasive stress detection.
-          </a>
-        </p>
-        <p>
-          Vasudev Bethamcherla, <b>Will Paul, Cecilia O. Alm,</b> Reynold Bailey, Joe Geigel, and Linwei Wang.
-        <p>
-          Proceedings of 1st Joint Conference on Facial Analysis, Animation &amp; Auditory-Visual Speech Processing 2015.
-        </p>
+      <tr id="paper0031">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.isca-speech.org/archive/avsp15/papers/av15_196.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Bethamcherla2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Bethamcherla2015">@inproceedings{Bethamcherla:2015, title={Face-speech sensor fusion for non-invasive stress detection.}, author={Bethamcherla, Vasudev and Paul, Will and Alm, Cecilia Ovesdotter and Bailey, Reynold J and Geigel, Joe and Wang, Linwei}, booktitle={AVSP}, pages={196--201}, year={2015}}</p>
         </td>
-        <td><span>Multimodal, Speech</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Face-speech sensor fusion for non-invasive stress detection.</p>
+          <p>Vasudev Bethamcherla, <b>Will Paul</b>, <b>Cecilia O. Alm</b>, Reynold Bailey, Joe Geigel, and Linwei Wang.</p>
+          <p>AVSP '15: Proceedings of 1st Conference on Facial Analysis, Animation &amp; Auditory-Visual Speech Processing.</p>
+        </td>
+        <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.isca-speech.org/archive/interspeech_2015/papers/i15_3710.pdf" target="_blank" title="PDF of the paper">
-          Stressed out: What speech tells us about stress.
-        </a></p>
-        <p>
-          <b>Will Paul, Cecilia O. Alm,</b> Reynold Bailey, Joe Geigel, and Linwei Wang.
-        <p>
-          In proceeding of <i>INTERSPEECH-2015</i>, 3710-3714.
-        </p>
+      <tr id="paper0030">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.isca-speech.org/archive/interspeech_2015/papers/i15_3710.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Paul2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Paul2015">@inproceedings{Paul:2015, title={Stressed out: What speech tells us about stress}, author={Paul, Will and Alm, Cecilia Ovesdotter and Bailey, Reynold and Geigel, Joe and Wang, Linwei}, booktitle={Annual Conference of the International Speech Communication Association}, year={2015}}</p>
         </td>
-        <td><span>Multimodal, Speech</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Stressed out: What speech tells us about stress.</p>
+          <p><b>Will Paul</b>, <b>Cecilia O. Alm</b>, Reynold Bailey, Joe Geigel, and Linwei Wang.</p>
+          <p>Interspeech '15: Proceedings of the 15th Annual Conference of the International Speech Communication Association.</p>
+        </td>
+        <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.aclweb.org/anthology/P/P15/P15-2035.pdf" target="_blank" title="PDF of the paper">
-          Measuring idiosyncratic interests in children with autism.
-        </a></p>
-        <p>
-        Masoud Rouhizadeh, <b>Emily Prud'hommeaux,</b> Jan van Santen, and Richard Sproat.
-        <p>
-        Proceedings of 53rd Annual Meeting of the Association for Computational Linguistics (ACL) 2015.
-        </p>
+      <tr id="paper0029">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/P/P15/P15-2035.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Rouhizadeh2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Rouhizadeh2015">@inproceedings{Rouhizadeh:2015, title={Measuring idiosyncratic interests in children with autism.}, author={Rouhizadeh, Masoud and Prud'Hommeaux, Emily and van Santen, Jan PH and Sproat, Richard}, booktitle={ACL (2)}, pages={212--217}, year={2015}}</p>
         </td>
-        <td><span>Social Media, Semantics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Measuring idiosyncratic interests in children with autism.</p>
+          <p>Masoud Rouhizadeh, <b>Emily Prud'hommeaux</b>, Jan van Santen, and Richard Sproat.</p>
+          <p>ACL '15: Proceedings of 53rd Annual Meeting of the Association for Computational Linguistics.</p>
+        </td>
+        <td><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p><a href="http://aclweb.org/anthology/N/N15/N15-1139.pdf" target="_blank" title="PDF of the paper">
-          #WhyIStayed, #WhyILeft: Microblogging to make sense of domestic abuse.
-        </a></p>
-        <p>
-        <b>Nicolas Schrading, Cecilia Ovesdotter Alm,</b> Raymond Ptucha, and Christopher Homan.
-        <p>
-          Proceedings of the 2015 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (pp. 1281-1286). Denver, Colorado.
-        </p>
+      <tr id="paper0028">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://aclweb.org/anthology/N/N15/N15-1139.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Schrading2015a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Schrading2015a">@inproceedings{Schrading:2015, title={\# WhyIStayed,\# WhyILeft: Microblogging to Make Sense of Domestic Abuse.}, author={Schrading, Nicolas and Alm, Cecilia Ovesdotter and Ptucha, Raymond W and Homan, Christopher}, booktitle={HLT-NAACL}, pages={1281--1286}, year={2015}}</p>
         </td>
-        <td><span>Social Media, Semantics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>#WhyIStayed, #WhyILeft: Microblogging to make sense of domestic abuse.</p>
+          <p><b>Nicolas Schrading</b>, <b>Cecilia O. Alm</b>, Raymond Ptucha, and Christopher Homan.</p>
+          <p>NAACL-HLT '15: Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics.</p>
+        </td>
+        <td><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <!-- <tr> -->
-      <!--   <td>2015</td> -->
-      <!--   <td> -->
-      <!--   <p><a href="http://link.springer.com/chapter/10.1007%2F978&#45;3&#45;319&#45;16577&#45;6_11" target="_blank" title="PDF of the paper"> -->
-      <!--     On utilizing nonstandard abbreviations and lexicon to infer demographic attributes of Twitter users -->
-      <!--   </a></p> -->
-      <!--   <p> -->
-      <!--     <b>Nathaniel Moseley, Cecilia O. Alm,</b> and Manjeet Rege -->
-      <!--   <p> -->
-      <!--     Advances in Intelligent Systems and Computing, Vol. 346: Formalism for Reuse and Systems Integration (pp. 257&#45;278) Heidelberg, New York: Springer. -->
-      <!--   </p> -->
-      <!--   </td> -->
-      <!--   <td><span>Semantics, Social Media</span></td> -->
-      <!-- </tr> -->
-
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.mitpressjournals.org/toc/coli/41/4" target="_blank">
-          Graph-based word alignment for clinical language evaluation.
-        </a></p>
-        <p>
-          <b>Emily Prud’hommeaux</b> and Brian Roark.
-        <p>
-          Computational Linguistics December 2015, Vol. 41, No. 4: 549–578.
-        </p>
+      <tr id="paper0027">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.mitpressjournals.org/toc/coli/41/4" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Prud2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Prud2015">@article{Prud:2015, title={Graph-based word alignment for clinical language evaluation}, author={Prud'hommeaux, Emily and Roark, Brian}, journal={Computational Linguistics}, volume={41}, number={4}, pages={549--578}, year={2015}, publisher={MIT Press}}</p>
         </td>
-        <td><span>Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Graph-based word alignment for clinical language evaluation.</p>
+          <p><b>Emily Prud'hommeaux</b> and Brian Roark.</p>
+          <p>Computational Linguistics December 2015, Vol. 41, No. 4: 549–578.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p><a href="http://iwcs2015.github.io/static/proceedings/main/pdf/IWCS201511.pdf" target="_blank" title="PDF of the paper">
-          Alignment of eye movements and spoken language for semantic image understanding.
-        </a></p>
-        <p>
-          <b>Preethi Vaidyanathan, Emily Prud’hommeaux, Cecilia O. Alm,</b> Jeff B. Pelz, and Anne R. Haake.</p>
-        <p>
-          Proceedings of the 11th International Conference on Computational Semantics.
-        </p>
+      <tr id="paper0026">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://iwcs2015.github.io/static/proceedings/main/pdf/IWCS201511.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2015a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Vaidyanathan2015a">@article{Vaidyanathan:2015, title={Alignment of eye movements and spoken language for semantic image understanding}, author={Vaidyanathan, Preethi and Prud'hommeaux, Emily and Alm, Cecilia O and Pelz, Jeff B and Haake, Anne R}, journal={IWCS 2015}, pages={76}, year={2015}}</p>
         </td>
-        <td><span>Semantics, Eye-tracking</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Alignment of eye movements and spoken language for semantic image understanding.</p>
+          <p><b>Preethi Vaidyanathan</b>, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, Jeff B. Pelz, and Anne R. Haake.</p>
+          <p>IWCS '15: Proceedings of the 11th International Conference on Computational Semantics.</p>
+        </td>
+        <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-semantics">&nbsp;Semantics</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
-      <tr>
-        <td>2015</td>
-        <td></td>
-        <td>
-        <p><a href="https://www.informs.org/content/download/296125/2820273/file/ics.2015.0018-pp236-244.pdf" target="_blank" title="PDF of the paper">
-          Inference from structured and unstructured electronic medical data for early dementia detection.
-        </a></p>
-        <p>
-          <b>Joseph Bullard,</b> Rohan Murde, Qi Yu, <b>Cecilia Ovesdotter Alm</b>, and Rubén Proa&ntilde;o.
-        </p>
-        <p>
-          INFORMS Computing Society (ICS) 2015.
-        </p>
+      <tr id="paper0025">
+        <td class="year">2015</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://scholarworks.rit.edu/cgi/viewcontent.cgi?article=1846&context=other" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Bullard2015">@inproceedings{Bullard:2015, title={Inference from structured and unstructured electronic medical data for dementia detection}, author={Bullard, Joseph and Murde, Rohan and Yu, Qi and Alm, Cecilia Ovesdotter and Proa{\~n}o, Rub{\'e}n}, booktitle={INFORMS Computing Society Conference}, pages={236--244}, year={2015}}</p>
         </td>
-        <td><span>Semantics, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Inference from structured and unstructured electronic medical data for early dementia detection.</p>
+          <p><b>Joseph Bullard</b>, Rohan Murde, Qi Yu, <b>Cecilia O. Alm</b>, and Rub&eacute;n Proa&ntilde;o.</p>
+          <p>ICS '15: Proceedings of the 2015 Conference for the INFORMS Computing Society.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://dl.acm.org/citation.cfm?id=2666642.2666649" target="_blank" title="PDF of the paper">
-          Fusing multimodal human expert data to uncover hidden semantics.
-        </a></p>
-        <p>
-          Xuan Guo, Qi Yu, Rui Li, <b>Cecilia Ovesdotter Alm</b>, and Anne R. Haake.
-        </p>
-        <p>
-          GazeIn '14: Proceedings of the 7th Workshop on Eye Gaze in Intelligent Human Machine Interaction: Eye-Gaze &amp; Multimodality.
-        </p>
+      <tr id="paper0024">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2666642.2666649" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Guo2014c');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Guo2014c">@inproceedings{Guo:2014, title={Fusing multimodal human expert data to uncover hidden semantics}, author={Guo, Xuan and Yu, Qi and Li, Rui and Alm, Cecilia Ovesdotter and Haake, Anne R}, booktitle={Proceedings of the 7th Workshop on Eye Gaze in Intelligent Human Machine Interaction: Eye-Gaze & Multimodality}, pages={21--26}, year={2014}, organization={ACM}}</p>
         </td>
-        <td><span>Semantics, Multimodal, Data-Fusion</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Fusing multimodal human expert data to uncover hidden semantics.</p>
+          <p>Xuan Guo, Qi Yu, Rui Li, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
+          <p>GazeIn '14: Proceedings of the 7th Workshop on Eye Gaze in Intelligent Human Machine Interaction: Eye-Gaze &amp; Multimodality.</p>
+        </td>
+        <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://aclweb.org/anthology/W14-4919" target="_blank" title="PDF of the paper">
-          Towards automatic annotation of clinical decision-making style.
-        </a></p>
-        <p>
-          <b>Limor Hochberg, Cecilia Ovesdotter Alm,</b> Esa M. Rantanen, Qi Yu, Caroline M. Delong, and Anne Haake.
-        </p>
-        <p>
-          Proceedings of LAW VIII - The 8th Linguistic Annotation Workshop.
-        </p>
+      <tr id="paper0023">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://aclweb.org/anthology/W14-4919" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Hochberg2014b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Hochberg2014b"></p>
         </td>
-        <td><span>Semantics, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Towards automatic annotation of clinical decision-making style.</p>
+          <p><b>Limor Hochberg</b>, <b>Cecilia O. Alm</b>, Esa M. Rantanen, Qi Yu, Caroline M. Delong, and Anne R. Haake.</p>
+          <p>LAW-VIII '14: Proceedings of the 8th Linguistic Annotation Workshop.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.aclweb.org/anthology/C14-1162" target="_blank" title="PDF of the paper">
-          Towards multimodal modeling of physicians' diagnostic confidence and self-awareness using medical narratives.
-        </a></p>
-        <p>
-          <b>Joseph Bullard, Cecilia Ovesdotter Alm,</b> Qi Yu, Pengcheng Shi, and Anne Haake.
-        </p>
-        <p>
-          Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers, Dublin, Ireland.
-        </p>
+      <tr id="paper0022">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/C14-1162" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2014b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Bullard2014b">@inproceedings{Bullard:2014, title={Towards multimodal modeling of physicians' diagnostic confidence and self-awareness using medical narratives.}, author={Bullard, Joseph and Alm, Cecilia Ovesdotter and Yu, Qi and Shi, Pengcheng and Haake, Anne R}, booktitle={COLING}, pages={1718--1727}, year={2014}}</p>
         </td>
-        <td><span>Semantics, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Towards multimodal modeling of physicians' diagnostic confidence and self-awareness using medical narratives.</p>
+          <p><b>Joseph Bullard</b>, <b>Cecilia O. Alm</b>, Qi Yu, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>COLING '14: Proceedings of the 25th International Conference on Computational Linguistics: Technical Papers.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <!-- <tr> -->
-      <!--   <td>2014</td> -->
-      <!--   <td> -->
-      <!--   <p><a href="https://dl.dropboxusercontent.com/u/585585/RESOURCEWEBSITE1/papers/moseleyalmrege_IRI2014.pdf" target="_blank" title="PDF of the paper"> -->
-      <!--     Toward inferring the age of Twitter users from their use of nonstandard abbreviations and lexicon. -->
-      <!--   </a></p> -->
-      <!--   <p> -->
-      <!--     Nathaniel Moseley, <b>Cecilia Ovesdotter Alm,</b>, and Manjeet Rege -->
-      <!--   </p> -->
-      <!--   <p> -->
-      <!--     Proceedings of IRI 2014 (pp. 219&#45;226). -->
-      <!--   </p> -->
-      <!--   </td> -->
-      <!--   <td><span>Semantics, Social Media</span></td> -->
-      <!-- </tr> -->
-
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://aclweb.org/anthology/W14-3412" target="_blank" title="PDF of the paper">
-          Decision style in a clinical reasoning corpus.
-        </a></p>
-        <p>
-          <b>Limor Hochberg, Cecilia Ovesdotter Alm,</b> Esa M. Rantanen, Caroline M. DeLong, and Anne Haake.
-        </p>
-        <p>
-          Proceedings of BioNLP 2014.
-        </p>
+      <tr id="paper0021">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://anthology.aclweb.org/W/W14/W14-3412.pdf#page=95" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Hochberg2014a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Hochberg2014a">@article{Hochberg:2014, title={Decision Style in a Clinical Reasoning Corpus}, author={Limor Hochberg and Cecilia Ovesdotter Alm and Esa M. Rantanen and Caroline M. DeLong and Anne R. Haake}, journal={BioNLP 2014}, pages={83--87}, year={2014}}</p>
         </td>
-        <td><span>Medical, Psycholinguistics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Decision style in a clinical reasoning corpus.</p>
+          <p><b>Limor Hochberg</b>, <b>Cecilia O. Alm</b>, Esa M. Rantanen, Caroline M. DeLong, and Anne R. Haake.</p>
+          <p>BioNLP '14: Proceedings of the Workshop on Biomedical Natural Language Processing.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-psycholinguistics">&nbsp;Psycholinguistics</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://aclweb.org/anthology/W14-3213" target="_blank" title="PDF of the paper">
-          Toward macro-insights for suicide prevention: Analyzing fine-grained distress at scale.
-        </a></p>
-        <p>
-        Christopher Homan, <b>Ravdeep Johar, Tong Liu,</b> Megan Lytle, Vincent Silenzio, and <b>Cecilia Ovesdotter Alm</b>.
-        </p>
-        <p>
-          Proceedings of the Workshop on Computational Linguistics and Clinical Psychology: From Linguistic Signal to Clinical Reality.
-        </p>
+      <tr id="paper0020">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://anthology.aclweb.org/W/W14/W14-3213.pdf#page=119" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Homan2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Homan2014">@article{tong2014, title={Toward macro-insights for suicide prevention: Analyzing fine-grained distress at scale}, author={Christopher Homan and Ravdeep Johar and Tong Liu and Megan Lytle and Vincent Silenzio and Cecilia Ovesdotter Alm}, journal={ACL 2014}, pages={107}, year={2014}}</p>
         </td>
-        <td><span>Medical, Psycholinguistics</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Toward macro-insights for suicide prevention: Analyzing fine-grained distress at scale.</p>
+          <p>Christopher Homan, <b>Ravdeep Johar</b>, <b>Tong Liu,</b> Megan Lytle, Vincent Silenzio, and <b>Cecilia O. Alm</b>.</p>
+          <p>Proceedings of the Workshop on Computational Linguistics and Clinical Psychology: From Linguistic Signal to Clinical Reality.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-psycholinguistics">&nbsp;Psycholinguistics</p></td>
       </tr>
 
-      <!-- <tr> -->
-      <!--   <td>2014</td> -->
-      <!--   <td> -->
-      <!--   <p><a href="https://dl.dropboxusercontent.com/u/585585/RESOURCEWEBSITE1/papers/moseleyalmrege_RCIS2014.pdf" target="_blank" title="PDF of the paper"> -->
-      <!--     User&#45;annotated microtext data for modeling and analyzing sociolinguistic characteristics and age grading. -->
-      <!--   </a></p> -->
-      <!--   <p> -->
-      <!--     Nathaniel Moseley, <b>Cecilia Ovesdotter Alm,</b>, and Manjeet Rege -->
-      <!--   </p> -->
-      <!--   <p> -->
-      <!--     Proceedings of IEEE Eighth International Conference on Research Challenges in Information Science, Marrakesh, Morocco. (pp 221&#45;226). -->
-      <!--   </p> -->
-      <!--   </td> -->
-      <!--   <td><span>Semantics</span></td> -->
-      <!-- </tr> -->
-
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="https://dl.dropboxusercontent.com/u/585585/RESOURCEWEBSITE1/papers/bullard_alm2014.pdf" target="_blank" title="PDF of the paper">
-          Computational analysis to explore authors’ depiction of characters.
-        </a></p>
-        <p>
-          <b>Joseph Bullard</b>, and <b>Cecilia Ovesdotter Alm</b>.
-        </p>
-        <p>
-          Proceedings of the 3rd Workshop on Computational Linguistics for Literature (CLFL).
-        </p>
+      <tr id="paper0019">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://anthology.aclweb.org/W/W14/W14-0902.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2014a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Bullard2014a">@inproceedings{Bullard:2014, title={Computational analysis to explore authors' depiction of characters}, author={Bullard, Joseph and Alm, Cecilia Ovesdotter}, booktitle={Proceedings of the 3rd Workshop on Computational Linguistics for Literature (CLfL)}, pages={11--16}, year={2014}}</p>
         </td>
-        <td><span>CL for Literature</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+        <p>Computational analysis to explore authors' depiction of characters.</p>
+          <p><b>Joseph Bullard</b>, and <b>Cecilia O. Alm</b>.</p>
+          <p>EACL-CLfL '14: Proceedings of the 3rd Workshop on Computational Linguistics for Literature.</p>
+        </td>
+        <td><p class="tag tag-literature">&nbsp;Literature</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://dl.acm.org/citation.cfm?id=2578153.2578196" target="_blank" title="PDF of the paper">
-          Infusing perceptual expertise and domain knowledge into a human-centered image retrieval system: A prototype application.
-        </a></p>
-        <p>
-          Xuan Guo, Rui Li, <b>Cecilia Ovesdotter Alm</b>, Qi Yu, Jeff Pelz, Pengcheng Shi, and Anne Haake.
-        </p>
-        <p>
-          ETRA '14: Proceedings of the Symposium on Eye Tracking Research and Applications.
-        </p>
+      <tr id="paper0018">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2578153.2578196" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Guo2014b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Guo2014b">@inproceedings{Guo:2014, title={Infusing perceptual expertise and domain knowledge into a human-centered image retrieval system: a prototype application}, author={Guo, Xuan and Li, Rui and Alm, Cecilia and Yu, Qi and Pelz, Jeff and Shi, Pengcheng and Haake, Anne}, booktitle={Proceedings of the Symposium on Eye Tracking Research and Applications}, pages={275--278}, year={2014}, organization={ACM}}</p>
         </td>
-        <td><span>Semantics, Multimodal, Image Retrieval</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Infusing perceptual expertise and domain knowledge into a human-centered image retrieval system: A prototype application.</p>
+          <p>Xuan Guo, Rui Li, <b>Cecilia O. Alm</b>, Qi Yu, Jeff Pelz, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>ETRA '14: Proceedings of the Symposium on Eye Tracking Research and Applications.</p>
+        </td>
+        <td><p class="tag tag-imageprocessing">&nbsp;Images</p><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.aiimjournal.com/article/S0933-3657%2814%2900085-2/abstract" target="_blank" title="Abstract of the paper">
-          From spoken narratives to domain knowledge: Mining linguistic data for medical image understanding.
-        </a></p>
-        <p>
-          Xuan Guo, Qi Yu, <b>Cecilia Ovesdotter Alm,</b> Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.
-        </p>
-        <p>
-          Journal of Artificial Intelligence in Medicine. DOI:10.1016/j.artmed.2014.08.001.
-        </p>
+      <tr id="paper0017">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.aiimjournal.com/article/S0933-3657%2814%2900085-2/abstract" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Guo2014a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Guo2014a">@article{Guo:2014, title={From spoken narratives to domain knowledge: Mining linguistic data for medical image understanding}, author={Guo, Xuan and Yu, Qi and Alm, Cecilia Ovesdotter and Calvelli, Cara and Pelz, Jeff B and Shi, Pengcheng and Haake, Anne R}, journal={Artificial intelligence in medicine}, volume={62}, number={2}, pages={79--90}, year={2014}, publisher={Elsevier}}</p>
         </td>
-        <td><span>Semantics, Eye-tracking, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>From spoken narratives to domain knowledge: Mining linguistic data for medical image understanding.</p>
+          <p>Xuan Guo, Qi Yu, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>Journal of Artificial Intelligence in Medicine.</p>
+        </td>
+        <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://dl.acm.org/citation.cfm?id=2578153.2578207" target="_blank" title="PDF of the paper">
-          Recurrence quantification analysis reveals eye-movement behavior differences between experts and novices.
-        </a></p>
-        <p>
-          <b>Preethi Vaidyanathan</b>, Jeff Pelz, <b>Cecilia Ovesdotter Alm</b>, Pengcheng Shi, and Anne Haake.
-        </p>
-        <p>
-          ETRA '14: Proceedings of the Symposium on Eye Tracking Research and Applications Publisher: ACM.
-        </p>
+      <tr id="paper0016">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2578153.2578207" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Vaidyanathan2014">@inproceedings{Vaidyanathan:2014, title={Recurrence quantification analysis reveals eye-movement behavior differences between experts and novices}, author={Vaidyanathan, Preethi and Pelz, Jeff and Alm, Cecilia and Shi, Pengcheng and Haake, Anne}, booktitle={Proceedings of the Symposium on Eye Tracking Research and Applications}, pages={303--306}, year={2014}, organization={ACM}}</p>
         </td>
-        <td><span>Eye-tracking, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Recurrence quantification analysis reveals eye-movement behavior differences between experts and novices.</p>
+          <p><b>Preethi Vaidyanathan</b>, Jeff Pelz, <b>Cecilia O. Alm</b>, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>ETRA '14: Proceedings of the Symposium on Eye Tracking Research and Applications.</p>
+        </td>
+        <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://people.rit.edu/emilypx/PrudhommeauxSLT.pdf" target="_blank" title="PDF of the paper">
-          Computational analysis of trajectories of linguistic development in autism.
-        </a></p>
-        <p>
-          <b>Emily Prud'hommeaux</b>, Eric Morley, Masoud Rouhizadeh, Laura Silverman, Jan van Santen, Brian Roark, Richard Sproat, Sarah Kauper, and Rachel DeLaHunta.
-        </p>
-        <p>
-          IEEE Spoken Language Technology Workshop (SLT)., Lake Tahoe.
-        </p>
+      <tr id="paper0015">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://people.rit.edu/emilypx/PrudhommeauxSLT.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Prud2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Prud2014">@inproceedings{Prud:2014, title={Computational analysis of trajectories of linguistic development in autism}, author={Prud'hommeaux, Emily and Morley, Eric and Rouhizadeh, Masoud and Silverman, Laura and van Santeny, Jan and Roarkz, Brian and Sproatz, Richard and Kauper, Sarah and DeLaHunta, Rachel}, booktitle={Spoken Language Technology Workshop (SLT), 2014 IEEE}, pages={266--271}, year={2014}, organization={IEEE}}</p>
         </td>
-        <td><span>Speech, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Computational analysis of trajectories of linguistic development in autism.</p>
+          <p><b>Emily Prud'hommeaux</b>, Eric Morley, Masoud Rouhizadeh, Laura Silverman, Jan van Santen, Brian Roark, Richard Sproat, Sarah Kauper, and Rachel DeLaHunta.</p>
+          <p>IEEE-SLT '14: Proceedings of the 2014 IEEE Spoken Language Technology Workshop.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
-      <tr>
-        <td>2014</td>
-        <td></td>
-        <td>
-        <p><a href="http://acl2014.org/acl2014/W14-32/pdf/W14-3206.pdf" target="_blank" title="PDF of the paper">
-          Detecting linguistic idiosyncratic interests in autism using distributional semantic models.
-        </a></p>
-        <p>
-          Masoud Rouhizadeh, <b>Emily Prud'hommeaux</b>, Jan van Santen, and Richard Sproat.</p>
-        <p>
-          In Proceedings of the ACL 2014 Workshop on Computational Linguistics and Clinical Psychology (CLPsych).
-        </p>
+      <tr id="paper0014">
+        <td class="year">2014</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://acl2014.org/acl2014/W14-32/pdf/W14-3206.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Rouhizadeh2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Rouhizadeh2014">@inproceedings{Rouhizadeh:2014, title={Detecting linguistic idiosyncratic interests in autism using distributional semantic models}, author={Rouhizadeh, Masoud and Prud'hommeaux, Emily and van Santen, Jan and Sproat, Richard}, booktitle={The Workshop on Computational Linguistics and Clinical Psychology: From Linguistic Signal to Clinical Reality2014}, pages={46--50}, year={2014}}</p>
         </td>
-        <td><span>Semantics, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Detecting linguistic idiosyncratic interests in autism using distributional semantic models.</p>
+          <p>Masoud Rouhizadeh, <b>Emily Prud'hommeaux</b>, Jan van Santen, and Richard Sproat.</p>
+          <p>CLPsych '14: Proceedings of the ACL 2014 Workshop on Computational Linguistics and Clinical Psychology.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
-      <tr>
-        <td>2013</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.isca-speech.org/archive/archive_papers/interspeech_2013/i13_2549.pdf" target="_blank" title="PDF of the paper">
-          Markers of confidence and correctness in spoken medical narratives.
-        </a></p>
-        <p>
-          <b>Kathryn Womack, Cecilia Ovesdotter Alm,</b> Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne Haake.
-        </p>
-        <p>
-          Proceeding of Interspeech 2013, Lyon, France.
-        </p>
+      <tr id="paper0013">
+        <td class="year">2013</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.isca-speech.org/archive/archive_papers/interspeech_2013/i13_2549.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Womack2013b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Womack2013b">@inproceedings{Womack:2013, title={Markers of confidence and correctness in spoken medical narratives.}, author={Womack, Kathryn and Alm, Cecilia Ovesdotter and Calvelli, Cara and Pelz, Jeff B and Shi, Pengcheng and Haake, Anne R}, booktitle={INTERSPEECH}, pages={2549--2553}, year={2013}}</p>
         </td>
-        <td><span>Speech, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Markers of confidence and correctness in spoken medical narratives.</p>
+          <p><b>Kathryn Womack</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>Interspeech '13: Proceedings of the 13th Annual Conference of the International Speech Communication Association.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
-      <tr>
-        <td>2013</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.busim.ee.boun.edu.tr/~erinc/pubs/interspeech13.pdf" target="_blank" title="PDF of the paper">
-          Investigation of MT-based ASR confusion models for semi-supervised discriminative language modeling.
-        </a></p>
-        <p>
-          Erinç Dikici, <b>Emily Prud’hommeaux</b>, Brian Roark, and Murat Saraçlar.
-        </p>
-        <p>
-          In Proceedings of the 13th Annual Conference of the International Speech Communication Association (Interspeech).
-        </p>
+      <tr id="paper0012">
+        <td class="year">2013</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.busim.ee.boun.edu.tr/~erinc/pubs/interspeech13.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Dikici2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Dikici2013">@inproceedings{Dikici:2013, title={Investigation of MT-based ASR confusion models for semi-supervised discriminative language modeling.}, author={Dikici, Erinç and Prud'hommeaux, Emily and Roark, Brian and Saraçlar, Murat}, booktitle={INTERSPEECH}, pages={1218--1222}, year={2013}}</p>
         </td>
-        <td><span>Language Modeling, Speech</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Investigation of MT-based ASR confusion models for semi-supervised discriminative language modeling.</p>
+          <p>Erin&#231; Dikici, <b>Emily Prud'hommeaux</b>, Brian Roark, and Murat Sara&#231;lar.</p>
+          <p>Interspeech '13: Proceedings of the 13th Annual Conference of the International Speech Communication Association.</p>
+        </td>
+        <td><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
-      <tr>
-        <td>2013</td>
-        <td></td>
-        <td>
-        <p><a href="http://www.isca-speech.org/archive/archive_papers/interspeech_2013/i13_3722.pdf" target="_blank" title="PDF of the paper">
-          Using linguistic analysis to characterize conceptual units of thought in spoken medical narratives.
-        </a></p>
-        <p>
-          <b>Kathryn Womack, Cecilia Ovesdotter Alm,</b> Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne Haake.
-        </p>
-        <p>
-          Proceeding of Interspeech 2013, Lyon, France.
-        </p>
+      <tr id="paper0011">
+        <td class="year">2013</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="http://www.isca-speech.org/archive/archive_papers/interspeech_2013/i13_3722.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Womack2013a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Womack2013a">@inproceedings{Womack:2013, title={Using linguistic analysis to characterize conceptual units of thought in spoken medical narratives.}, author={Womack, Kathryn and Alm, Cecilia Ovesdotter and Calvelli, Cara and Pelz, Jeff B and Shi, Pengcheng and Haake, Anne R}, booktitle={INTERSPEECH}, pages={3722--3726}, year={2013}}</p>
         </td>
-        <td><span>Speech, Medical</span></td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>Using linguistic analysis to characterize conceptual units of thought in spoken medical narratives.</p>
+          <p><b>Kathryn Womack</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>Interspeech '13: Proceedings of the 13th Annual Conference of the International Speech Communication Association.</p>
+        </td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
       <tr id="paper0010">
-        <td>2013</td>
+        <td class="year">2013</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://www.cs.rochester.edu/u/emilypx/RouhizadehEtAl2013-NAACL.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Rouhizadeh2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://www.cs.rochester.edu/u/emilypx/RouhizadehEtAl2013-NAACL.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Rouhizadeh2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Rouhizadeh2013">@inproceedings{Rouhizadeh:2013, title={Distributional semantic models for the evaluation of disordered language}, author={Rouhizadeh, Masoud and Prud'Hommeaux, Emily and Roark, Brian and van Santen, Jan}, booktitle={Proceedings of the conference. Association for Computational Linguistics. North American Chapter. Meeting}, volume={2013}, pages={709}, year={2013}, organization={NIH Public Access}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Distributional semantic models for the evaluation of disordered language.</em></p>
+          <p>Distributional semantic models for the evaluation of disordered language.</p>
           <p>Masoud Rouhizadeh, <b>Emily Prud'hommeaux</b>, Brian Roark, and Jan van Santen.</p>
-          <p>In Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics (NAACL-HLT).</p>
+          <p>NAACL-HLT '13: Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics.</p>
         </td>
-        <td><span>&bullet;Semantics</span></td>
+        <td><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
       <tr id="paper0009">
-        <td>2013</td>
+        <td class="year">2013</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://www.cslu.ogi.edu/~zak/naacl13-mcicrf.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Lehr2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://www.cslu.ogi.edu/~zak/naacl13-mcicrf.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Lehr2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Lehr2013">@inproceedings{Lehr:2013, title={Discriminative Joint Modeling of Lexical Variation and Acoustic Confusion for Automated Narrative Retelling Assessment.}, author={Lehr, Maider and Shafran, Izhak and Prud'hommeaux, Emily and Roark, Brian}, booktitle={HLT-NAACL}, pages={211--220}, year={2013}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Discriminative joint modeling of lexical variation and acoustic confusion for automated narrative retelling assessment.</em></p>
+          <p>Discriminative joint modeling of lexical variation and acoustic confusion for automated narrative retelling assessment.</p>
           <p>Maider Lehr, Izhak Shafran, <b>Emily Prud'hommeaux</b>, and Brian Roark.</p>
-          <p>In Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics (NAACL-HLT).</p>
+          <p>NAACL-HLT '13: Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics.</p>
         </td>
-        <td><span>&bullet;Semantics<br>&bullet;Speech</span></td>
+        <td><p class="tag tag-semantics">&nbsp;Semantics</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
       <tr id="paper0008">
-        <td>2012</td>
+        <td class="year">2012</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://onlinelibrary.wiley.com/doi/10.1002/lnc3.334/abstract" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Alm2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://onlinelibrary.wiley.com/doi/10.1002/lnc3.334/abstract" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Alm2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Alm2012">@article{Alm:2012, title={The role of affect in the computational modeling of natural language}, author={Alm, Cecilia Ovesdotter}, journal={Language and Linguistics Compass}, volume={6}, number={7}, pages={416--430}, year={2012}, publisher={Wiley Online Library}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>The role of affect in the computational modeling of <em>natural</em> language.</em></p>
-          <p><b>Cecilia Ovesdotter Alm</b>.</p>
+          <p>The role of affect in the computational modeling of <em>natural</em> language.</p>
+          <p><b>Cecilia O. Alm</b>.</p>
           <p>Language &amp; Linguistics Compass: Computational &amp; Mathematical, 6(7), 416-430.</p>
         </td>
-        <td><span>&bullet;Semantics</span></td>
+        <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
       <tr id="paper0007">
-        <td>2012</td>
+        <td class="year">2012</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://www.aclweb.org/anthology/W12-3801" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Womack2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/W12-3801" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Womack2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Womack2012">@inproceedings{Womack:2012, title={Disfluencies as extra-propositional indicators of cognitive processing}, author={Womack, Kathryn and McCoy, Wilson and Alm, Cecilia Ovesdotter and Calvelli, Cara and Pelz, Jeff B. and Shi, Pengcheng and Haake, Anne R.}, booktitle={Proceedings of the workshop on extra-propositional aspects of meaning in computational linguistics}, pages={1--9}, year={2012}, organization={Association for Computational Linguistics}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Disfluencies as extra-propositional indicators of cognitive processing.</em></p>
-          <p><b>Kathryn Womack</b>, <b>Wilson McCoy</b>, <b>Cecilia Ovesdotter Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>Disfluencies as extra-propositional indicators of cognitive processing.</p>
+          <p><b>Kathryn Womack</b>, <b>Wilson McCoy</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
           <p>ExProM '12: Proceedings of the Workshop on Extra-Propositional Aspects of Meaning in Computational Linguistics.</p>
         </td>
-        <td><span>&bullet;Speech<br>&bullet;Semantics</span></td>
+        <td><p class="tag tag-semantics">&nbsp;Semantics</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
       <tr id="paper0006">
-        <td>2012</td>
+        <td class="year">2012</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://dl.acm.org/citation.cfm?id=2392701.2392704" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#McCoy2012b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2392701.2392704" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#McCoy2012b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="McCoy2012b">@inproceedings{McCoy:2012, title={Linking uncertainty in physicians' narratives to diagnostic correctness}, author={McCoy, Wilson and Pelz, Jeff B. and Alm, Cecilia Ovesdotter and Shi, Pengcheng and Calvelli, Cara and Haake, Anne R.}, booktitle={Proceedings of the Workshop on Extra-Propositional Aspects of Meaning in Computational Linguistics}, pages={19--27}, year={2012}, organization={Association for Computational Linguistics}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Linking uncertainty in physicians' narratives to diagnostic correctness.</em></p>
-          <p><b>Wilson McCoy</b>, Jeff B. Pelz, <b>Cecilia Ovesdotter Alm</b>, Pengcheng Shi, Cara Calvelli, and Anne R. Haake.</p>
+          <p>Linking uncertainty in physicians' narratives to diagnostic correctness.</p>
+          <p><b>Wilson McCoy</b>, Jeff B. Pelz, <b>Cecilia O. Alm</b>, Pengcheng Shi, Cara Calvelli, and Anne R. Haake.</p>
           <p>ExProM '12: Proceedings of the Workshop on Extra-Propositional Aspects of Meaning in Computational Linguistics.</p>
         </td>
-        <td><span>&bullet;Medical<br>&bullet;Speech<br>&bullet;Semantics</span></td>
+        <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
       <tr id="paper0005">
-        <td>2012</td>
+        <td class="year">2012</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://dl.acm.org/citation.cfm?id=2392747.2392761" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#McCoy2012a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2392747.2392761" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#McCoy2012a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="McCoy2012a">@inproceedings{McCoy:2012, title={Annotation schemes to encode domain knowledge in medical narratives}, author={McCoy, Wilson and Alm, Cecilia Ovesdotter and Calvelli, Cara and Li, Rui and Pelz, Jeff B. and Shi, Pengcheng and Haake, Anne R.}, booktitle={Proceedings of the Sixth Linguistic Annotation Workshop}, pages={95--103}, year={2012}, organization={Association for Computational Linguistics}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Annotation schemes to encode domain knowledge in medical narratives.</em></p>
-          <p><b>Wilson McCoy</b>, <b>Cecilia Ovesdotter Alm</b>, Cara Calvelli, Ru Li, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
-          <p>LAW VI '12: Proceedings of the Sixth Linguistic Annotation Workshop Publisher: Association for Computational Linguistics.</p>
+          <p>Annotation schemes to encode domain knowledge in medical narratives.</p>
+          <p><b>Wilson McCoy</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Ru Li, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
+          <p>LAW VI '12: Proceedings of the 6th Linguistic Annotation Workshop of the Association for Computational Linguistics.</p>
         </td>
-        <td><span>&bullet;Annotation<br>&bullet;Medical</span></td>
+        <td><p class="tag tag-annotation">&nbsp;Annotation</p><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p></td>
       </tr>
 
       <tr id="paper0004">
-        <td>2012</td>
+        <td class="year">2012</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://dl.acm.org/citation.cfm?id=2390374.2390376" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Lehrman2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2390374.2390376" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Lehrman2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Lehrman2012">@inproceedings{Lehrman:2012, title={Detecting distressed and non-distressed affect states in short forum texts}, author={Lehrman, Michael Thaul and Alm, Cecilia Ovesdotter and Proaño, Rubén A}, booktitle={Proceedings of the Second Workshop on Language in Social Media}, pages={9--18}, year={2012}, organization={Association for Computational Linguistics}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Detecting distressed and non-distressed affect states in short forum texts.</em></p>
-          <p>Michael Thaul Lehrman, <b>Cecilia Ovesdotter Alm</b>, and Rub&eacute;n A. Proa&ntilde;o.</p>
-          <p>LSM '12: Proceedings of the Second Workshop on Language in Social Media.</p>
+          <p>Detecting distressed and non-distressed affect states in short forum texts.</p>
+          <p>Michael Thaul Lehrman, <b>Cecilia O. Alm</b>, and Rub&eacute;n A. Proa&ntilde;o.</p>
+          <p>LSM '12: Proceedings of the 2nd Workshop on Language in Social Media.</p>
         </td>
-        <td><span>&bullet;Affect<br>&bullet;Semantics</span></td>
+        <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
       <tr id="paper0003">
-        <td>2012</td>
+        <td class="year">2012</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://dl.acm.org/citation.cfm?id=2168556.2168645" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Li2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2168556.2168645" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Li2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Li2012">@inproceedings{Li:2012, title={Learning eye movement patterns for characterization of perceptual expertise}, author={Li, Rui and Pelz, Jeff and Shi, Pengcheng and Alm, Cecilia Ovesdotter and Haake, Anne R}, booktitle={Proceedings of the Symposium on Eye Tracking Research and Applications}, pages={393--396}, year={2012}, organization={ACM}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Learning eye movement patterns for characterization of perceptual expertise.</em></p>
-          <p>Rui Li, Jeff Pelz, Pengcheng Shi, <b>Cecilia Ovesdotter Alm</b>, and Anne R. Haake.</p>
+          <p>Learning eye movement patterns for characterization of perceptual expertise.</p>
+          <p>Rui Li, Jeff Pelz, Pengcheng Shi, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
           <p>ETRA '12: Proceedings of the Symposium on Eye Tracking Research and Applications.</p>
         </td>
-        <td><span>&bullet;Eye-tracking<br>&bullet;Multimodal<br>&bullet;Speech</span></td>
+        <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
 
       <tr id="paper0002">
-        <td>2012</td>
+        <td class="year">2012</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://www.aclweb.org/anthology/W12-2401" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Prud2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://www.aclweb.org/anthology/W12-2401" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Prud2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Prud2012">@inproceedings{Prud:2012, title={Graph-based alignment of narratives for automated neurological assessment}, author={Prud'hommeaux, Emily T and Roark, Brian}, booktitle={Proceedings of the 2012 Workshop on Biomedical Natural Language Processing}, pages={1--10}, year={2012}, organization={Association for Computational Linguistics}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Graph-based alignment of narratives for automated neurological assessment.</em></p>
+          <p>Graph-based alignment of narratives for automated neurological assessment.</p>
           <p><b>Emily Prud'hommeaux</b>, and Brian Roark.</p>
           <p>BioNLP '12: Proceedings of the 2012 Workshop on Biomedical Natural Language Processing.</p>
         </td>
-        <td><span>&bullet;Semantics</span></td>
+        <td><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
 
       <tr id="paper0001">
-        <td>2011</td>
+        <td class="year">2011</td>
         <td> <!-- PDF, BIBTEX -->
-          <br><p><a href="http://anthology.aclweb.org/P/P11/P11-2.pdf#page=147" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
-          <br><p><a style="text-decoration: none !important;" href="javascript:copyToClipboard('#Alm2011');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p class="bibtex"><a href="http://anthology.aclweb.org/P/P11/P11-2.pdf#page=147" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Alm2011');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
           <p hidden id="Alm2011">@inproceedings{Alm:2011, title={Subjective natural language problems: Motivations, applications, characterizations, and implications}, author={Alm, Cecilia Ovesdotter}, booktitle={Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume 2}, pages={107--112}, year={2011}, organization={Association for Computational Linguistics}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-          <p><em>Subjective natural language problems: Motivations, applications, characterizations, and implications.</em></p>
-          <p><b>Cecilia Ovesdotter Alm</b>.</p>
-          <p>Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies.</p>
+          <p>Subjective natural language problems: Motivations, applications, characterizations, and implications.</p>
+          <p><b>Cecilia O. Alm</b>.</p>
+          <p>NAACL-HLT '11: Proceedings of the Human Language Technologies Conference of the North American Chapter of the Association for Computational Linguistics.</p>
         </td>
-        <td><span>&bullet;Semantics</span></td>
+        <td><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
     </tbody>
   </table>

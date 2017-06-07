@@ -13,30 +13,17 @@
     <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/4bf3214f2e.js"></script>
     <script src="javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.get("assets/header.html", function(htmlFile) {
+            $("#clasp-header").html(htmlFile);
+            $("#clasp-header").find("#nav-link-people").addClass("link--highlight");
+        });
+    </script>
   </head>
 
   <body>
     <div class="container">
-    <header class="banner" role="banner">
-      <div class="banner-wrapper">
-
-        <a href="index.html">
-          <img src="images/logo.svg" onerror="this.src= images/logo.png" alt="CLASP: Computational Linguistics and Speech Processing Lab" class="logo" />
-        </a>
-
-        <nav class="main-nav" role="navigation">
-          <a href="javascript:void(0)" id="js-banner-mobile-menu" class="banner-mobile-menu">MENU</a>
-
-          <ul id="js-banner-menu" class="banner-menu show">
-            <li class="nav-link"><a class="" href="./index.html"><i class="fa fa-home">&nbsp;</i>home</a></li>
-            <li class="nav-link"><a class=" link--highlight " href="people.html"><i class="fa fa-users">&nbsp;</i>people</a></li>
-            <li class="nav-link"><a class="" href="publications.html"><i class="fa fa-book">&nbsp;</i>publications</a></li>
-            <li class="nav-link"><a class="" href="news.html"><i class="fa fa-file-text">&nbsp;</i>news</a></li>
-            <li class="nav-link"><a class="" href="contact.html"><i class="fa fa-envelope">&nbsp;</i>contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <header id="clasp-header" class="banner" role="banner"></header>
 
   <div class="content">
     <h1 class="card-section">Co-Directors</h1>
@@ -44,7 +31,7 @@
     <div class="cards">
       <div class="card card--director">
         <div class="card-image">
-          <img src="images/cissi.jpg" />
+          <img src="images/people/alm-cissi.jpg" />
         </div>
 
         <p class="card-title">Assistant Professor</p>
@@ -52,14 +39,14 @@
 
         <div class="card-copy">
           <p>
-          Cecilia’s research interests focus on linguistic sensing and and mining with text, speech, and multimodal data. She has special interests in meaning, affect, multimodality, health/wellbeing, and education, and is dedicated to supporting student research and training experiences. Cecilia is the PI of an NSF award entitled <em>REU Site: Computational Sensing</em>. She is often involved in interdisciplinary research collaborations. Besides her Ph.D. in Linguistics from the University of Illinois at Urbana-Champaign (centered on computational linguistics), she also holds a Certificate of Advanced Study in Language and Speech Processing and a Certificate of Graduate Specialization in Computational Science and Engineering from UIUC. <a href="https://dl.dropboxusercontent.com/u/585585/RESOURCEWEBSITE1/CV_COA.pdf">Link to CV.</a>
+          Cecilia's research interests focus on linguistic sensing and and mining with text, speech, and multimodal data. She has special interests in meaning, affect, multimodality, health/wellbeing, and education, and is dedicated to supporting student research and training experiences. Cecilia is the PI of an NSF award entitled <em>REU Site: Computational Sensing</em>. She is often involved in interdisciplinary research collaborations. Besides her Ph.D. in Linguistics from the University of Illinois at Urbana-Champaign (centered on computational linguistics), she also holds a Certificate of Advanced Study in Language and Speech Processing and a Certificate of Graduate Specialization in Computational Science and Engineering from UIUC. <a href="https://dl.dropboxusercontent.com/u/585585/RESOURCEWEBSITE1/CV_COA.pdf">Link to CV.</a>
           </p>
         </div>
       </div>
 
       <div class="card card--director">
         <div class="card-image">
-          <img src="images/emily.jpg" />
+          <img src="images/people/prudhommeaux-emily.jpg" />
         </div>
 
         <p class="card-title">Assistant Professor</p>
@@ -94,7 +81,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/preethi2.png" />
+          <img src="images/people/vaidyanathan-preethi.png" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">Ph.D. Candidate</span><br><i class="fa fa-eye">&nbsp;</i>Imaging Science</p>
@@ -103,7 +90,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/robbie.jpg" />
+          <img src="images/people/jimerson-robbie.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">Ph.D. Candidate</span><br><i class="fa fa-desktop">&nbsp;</i>Computing &amp; Information Sciences</p>
@@ -112,7 +99,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/tong.jpg" />
+          <img src="images/people/liu-tong.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">Ph.D. Candidate</span><br><i class="fa fa-desktop">&nbsp;</i>Computing &amp; Information Sciences</p>
@@ -121,7 +108,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/miguel.jpg" />
+          <img src="images/people/dominguez-miguel.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">Ph.D. Candidate</span><br><i class="fa fa-desktop">&nbsp;</i>Computing &amp; Information Sciences</p>
@@ -130,16 +117,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/titus.jpg" />
-        </div>
-
-        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. Candidate</span><br><i class="fa fa-microchip">&nbsp;</i>Electrical Engineering</p>
-        <h5 class="card-header">Titus Thomas</h5>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="images/suhas-pillai.jpg" />
+          <img src="images/people/pillai-suhas.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. Candidate</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -148,43 +126,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/michael-berezny.jpg" />
-        </div>
-
-        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. Candidate</span><br><i class="fa fa-wrench">&nbsp;</i>Mechanical Engineering</p>
-        <h5 class="card-header">Michael Berezny</h5>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="images/adam-casson.jpg" />
-        </div>
-
-        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. Candidate</span><br><i class="fa fa-eye">&nbsp;</i>Imaging Science</p>
-        <h5 class="card-header">Adam Casson</h5>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="images/rachel-doucet.jpg" />
-        </div>
-
-        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. Candidate</span><br><i class="fa fa-handshake-o">&nbsp;</i>Advertising &amp; Public Relations</p>
-        <h5 class="card-header">Rachel Doucet</h5>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="images/woman.png" />
-        </div>
-
-        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. Candidate</span><br><i class="fa fa-flask">&nbsp;</i>Chemical Engineering</p>
-        <h5 class="card-header">Christine Gerding</h5>
-      </div>
-
-      <div class="card">
-        <div class="card-image">
-          <img src="images/douglas-gliner.jpg" />
+          <img src="images/people/gliner-douglas.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. Candidate</span><br><i class="fa fa-gamepad">&nbsp;</i>Game Design &amp; Development</p>
@@ -193,7 +135,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/ben-meyers.jpg" />
+          <img src="images/people/meyers-ben.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. Candidate</span><br><i class="fa fa-terminal">&nbsp;</i>Software Engineering</p>
@@ -208,7 +150,67 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/anil.jpg" />
+          <img src="images/people/thomas-titus.jpg" />
+        </div>
+
+        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. 2017</span><br><i class="fa fa-microchip">&nbsp;</i>Electrical Engineering</p>
+        <h5 class="card-header">Titus Thomas</h5>
+
+        <div class="card-copy">
+          <p>
+            <i class="fa fa-briefcase">&nbsp;</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/people/casson-adam.jpg" />
+        </div>
+
+        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2017</span><br><i class="fa fa-eye">&nbsp;</i>Imaging Science</p>
+        <h5 class="card-header">Adam Casson</h5>
+
+        <div class="card-copy">
+          <p>
+            <i class="fa fa-briefcase">&nbsp;</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/people/doucet-rachel.jpg" />
+        </div>
+
+        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2017</span><br><i class="fa fa-handshake-o">&nbsp;</i>Advertising &amp; Public Relations</p>
+        <h5 class="card-header">Rachel Doucet</h5>
+
+        <div class="card-copy">
+          <p>
+            <i class="fa fa-briefcase">&nbsp;</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/people/woman.png" />
+        </div>
+
+        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2017</span><br><i class="fa fa-flask">&nbsp;</i>Chemical Engineering</p>
+        <h5 class="card-header">Christine Gerding</h5>
+
+        <div class="card-copy">
+          <p>
+            <i class="fa fa-briefcase">&nbsp;</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/people/behera-anil.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. 2016</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -223,7 +225,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/andy.jpg" />
+          <img src="images/people/terkik-andy.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. 2016</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -238,7 +240,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/victor.jpg" />
+          <img src="images/people/trejo-victor.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. 2016</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -253,7 +255,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/nick.jpg" />
+          <img src="images/people/schrading-nick.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S./M.S. 2015</span><br><i class="fa fa-desktop">&nbsp;</i>Computer Engineering</p>
@@ -268,7 +270,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/joe.jpg" />
+          <img src="images/people/bullard-joe.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. 2015</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -283,7 +285,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/will.jpg" />
+          <img src="images/people/paul-will.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2016</span><br><i class="fa fa-fast-forward">&nbsp;</i>New Media Interactive Development</p>
@@ -298,7 +300,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/man.png" />
+          <img src="images/people/man.png" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2015</span><br><i class="fa fa-terminal">&nbsp;</i>Software Engineering</p>
@@ -313,7 +315,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/ben.jpg" />
+          <img src="images/people/cohen-ben.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2015</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -328,7 +330,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/man.png" />
+          <img src="images/people/man.png" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2016</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -343,7 +345,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/limor.png" />
+          <img src="images/people/hochberg-limor.png" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. 2014</span><br><i class="fa fa-cog">&nbsp;</i>Experimental &amp; Engineering Psychology</p>
@@ -358,7 +360,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/ravdeep.png" />
+          <img src="images/people/johar-ravdeep.png" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">M.S. 2014</span><br><i class="fa fa-code">&nbsp;</i>Computer Science</p>
@@ -373,7 +375,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/kathryn.png" />
+          <img src="images/people/womack-kathryn.png" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2013</span><br><i class="fa fa-american-sign-language-interpreting">&nbsp;</i>ASL-English Interpreting</p>
@@ -388,7 +390,7 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/wilson.png" />
+          <img src="images/people/mccoy-wilson.png" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. 2012</span><br><i class="fa fa-gamepad">&nbsp;</i>Game Design &amp; Development</p>
@@ -403,7 +405,22 @@
 
       <div class="card">
         <div class="card-image">
-          <img src="images/janai.jpg" />
+          <img src="images/people/berezny-michael.jpg" />
+        </div>
+
+        <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S./M.S. Candidate</span><br><i class="fa fa-wrench">&nbsp;</i>Mechanical Engineering</p>
+        <h5 class="card-header">Michael Berezny</h5>
+
+        <div class="card-copy">
+          <p>
+            <i class="fa fa-briefcase">&nbsp;</i>
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <img src="images/people/gray-janai.jpg" />
         </div>
 
         <p class="card-title"><i class="fa fa-graduation-cap">&nbsp;</i><span style="text-decoration:underline;">B.S. Candidate</span><br><i class="fa fa-gavel">&nbsp;</i>Criminal Justice and Sociology</p>
