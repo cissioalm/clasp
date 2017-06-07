@@ -17,6 +17,9 @@
         $.get("assets/header.html", function(htmlFile) {
             $("#clasp-header").html(htmlFile);
         });
+        $.get("assets/footer.html", function(htmlFile) {
+            $("#clasp-footer").html(htmlFile);
+        });
     </script>
   </head>
 
@@ -58,6 +61,7 @@
     </section>
   </div>
 
+      <div id="clasp-footer" hidden></div>
     </div>
   </body>
 </html>

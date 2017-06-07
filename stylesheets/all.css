@@ -1,3 +1,12 @@
+:root {
+  --RIT_BROWN:#513127;
+  --RIT_ORANGE:#F36E21;
+  --DARK_GREY:#333333;
+  --LIGHT_GREY:#E7E7E7;
+  --CARD_GREY:#F7F7F7;
+  --LEGACY_GREY:#E7F1EC;
+}
+
 @charset "UTF-8";
 /* Bitters 0.10.0
  * http://bitters.bourbon.io
@@ -7,7 +16,7 @@
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: #FF6D24;
+  background-color: var(--RIT_ORANGE);
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -104,7 +113,7 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #FF6D24;
+  color: var(--RIT_ORANGE);
   text-decoration: none;
   /*border-bottom: 1px solid #FF6D24;*/ }
   /* line 82, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_typography.scss */
@@ -147,7 +156,7 @@ cite {
 
 /* line 1, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_forms.scss */
 fieldset {
-  background: #f7f7f7;
+  background: var(--LIGHT_GREY);
   border: 1px solid #DDD;
   margin: 0 0 0.75em 0;
   padding: 1.5em; }
@@ -199,7 +208,7 @@ select[multiple=multiple] {
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
-    border-color: #FF6D24;
+    border-color: var(--RIT_ORANGE);
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(255, 92, 10, 0.7);
     outline: none; }
 
@@ -514,7 +523,7 @@ html {
 
 /* line 178, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
 .footable-odd {
-  background-color: #f7f7f7; }
+  background-color: var(--LIGHT_GREY); }
 
 /*//////////////////////////////////////////////////////////////////////////*/
 @font-face {
@@ -606,7 +615,7 @@ h2.important {
 /*//////////////////////////////////////////////////////////////////////////*/
 /* line 109, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .banner {
-  background-color: #E7F1EC;
+  background-color: var(--LIGHT_GREY);
   width: 100%;
   z-index: 9999;
   border: 1px solid gainsboro; }
@@ -686,7 +695,7 @@ h2.important {
       margin-left: 2.2em; } }
   /* line 218, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
   .banner ul li.nav-link {
-    background: #E7F1EC;
+    background: var(--LIGHT_GREY);
     display: block;
     line-height: 3.5em;
     overflow: hidden;
@@ -739,7 +748,7 @@ h2.important {
 
 /* line 278, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .card {
-  background-color: #f7f7f7;
+  background-color: var(--CARD_GREY);
   border-radius: 3px;
   border: 1px solid #DDD;
   position: relative;
@@ -771,7 +780,7 @@ h2.important {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background: #DBD199;
+    background: #DDD;
     margin: 0.75em 0.75em;
     max-height: 180px; }
   /* line 337, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
@@ -779,12 +788,12 @@ h2.important {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background-color: #f7f7f7;
+    background-color: var(--CARD_GREY);
     border-bottom: 1px solid #DDD;
     border-radius: 3px 3px 0 0;
     font-weight: bold;
     line-height: 1.5em;
-    padding: 0.5em 0.75em; }
+    padding: 0 0 0 0.75em; }
   /* line 347, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
   .card .card-title {
     /*border-bottom: 1px solid;*/
@@ -799,7 +808,7 @@ h2.important {
   .card .card-copy {
     font-size: 0.9em;
     line-height: 1.5em;
-    padding: 0.75em 0.75em; }
+    padding: 0 0 0.5em 1.2em; }
     /* line 363, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
     .card .card-copy p {
       margin: 0 0 0.75em; }
@@ -822,7 +831,7 @@ h2.important {
   float: left;
   width: 50%;
   padding-bottom: 2em;
-  border-bottom: 1px solid #DDDDDD; }
+  border-bottom: 1px solid #DDD; }
 
 /* line 390, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .main-col {
@@ -925,19 +934,21 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag {
-  border: 2px solid;
+  border: 2px solid var(--DARK_GREY);
+  /*background-color: #F36E21;*/
   border-radius: 15px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1px;
   margin-top: 1px;
   font-weight: bold;
-  font-size: 16px;
-  color: white;
+  font-size: 15px;
+  padding-left: 0.5em;
+  color: var(--DARK_GREY);
 }
 
 .publications td:nth-child(4) > p.tag:hover {
-  background-color: black !important;
-  border-color: black !important;
+  background-color: var(--DARK_GREY);
+  color: var(--LIGHT_GREY);
 }
 
 .publications td:nth-child(4) > p.tag:before {
@@ -947,8 +958,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-medical {
-  border-color: #FF6D24;
-  background-color: #FF6D24;
+  /*border-color: #FF6D24;
+  background-color: #FF6D24;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-medical:before {
@@ -956,8 +967,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-semantics {
-  border-color: deepskyblue;
-  background-color: deepskyblue;
+  /*border-color: deepskyblue;
+  background-color: deepskyblue;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-semantics:before {
@@ -965,8 +976,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-software {
-  border-color: darkslateblue;
-  background-color: darkslateblue;
+  /*border-color: darkslateblue;
+  background-color: darkslateblue;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-software:before {
@@ -974,29 +985,29 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-discourse {
-  border-color: darkgreen;
-  background-color: darkgreen;
+  /*border-color: darkgreen;
+  background-color: darkgreen;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-discourse:before {
-  content: "\f095";
+  content: "\f086";
 }
 
 .publications td:nth-child(4) > p.tag.tag-cybersecurity {
-  height: 26px !important;
+  /*height: 26px !important;
   border-color: darkmagenta;
   background-color: darkmagenta;
-  font-size: 14px !important;
+  font-size: 14px !important;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-cybersecurity:before {
   content: "\f023";
-  font-size: 14px !important;
+  /*font-size: 14px !important;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-imageprocessing {
-  border-color: #46CC00;
-  background-color: #46CC00;
+  /*border-color: #46CC00;
+  background-color: #46CC00;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-imageprocessing:before {
@@ -1004,8 +1015,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-affect {
-  border-color: #333333;
-  background-color: #333333;
+  /*border-color: #333333;
+  background-color: #333333;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-affect:before {
@@ -1013,8 +1024,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-socialmedia {
-  border-color: #660000;
-  background-color: #660000;
+  /*border-color: #660000;
+  background-color: #660000;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-socialmedia:before {
@@ -1022,8 +1033,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-eyetracking {
-  border-color: #6666ff;
-  background-color: #6666ff;
+  /*border-color: #6666ff;
+  background-color: #6666ff;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-eyetracking:before {
@@ -1031,21 +1042,17 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-psycholinguistics {
-  height: 26px !important;
-  line-height: 200%;
-  border-color: #664400;
-  background-color: #664400;
-  font-size: 11px !important;
+  /*border-color: #664400;
+  background-color: #664400;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-psycholinguistics:before {
   content: "\f1b3";
-  font-size: 11px !important;
 }
 
 .publications td:nth-child(4) > p.tag.tag-speech {
-  border-color: #666666;
-  background-color: #666666;
+  /*border-color: #666666;
+  background-color: #666666;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-speech:before {
@@ -1053,8 +1060,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-multimodal {
-  border-color: #000099;
-  background-color: #000099;
+  /*border-color: #000099;
+  background-color: #000099;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-multimodal:before {
@@ -1062,8 +1069,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-annotation {
-  border-color: #513127;
-  background-color: #513127;
+  /*border-color: #513127;
+  background-color: #513127;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-annotation:before {
@@ -1071,8 +1078,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-narratives {
-  border-color: #CC3399;
-  background-color: #CC3399;
+  /*border-color: #CC3399;
+  background-color: #CC3399;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-narratives:before {
@@ -1080,8 +1087,8 @@ h2.important {
 }
 
 .publications td:nth-child(4) > p.tag.tag-literature {
-  border-color: #6689A1;
-  background-color: #6689A1;
+  /*border-color: #6689A1;
+  background-color: #6689A1;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-literature:before {
