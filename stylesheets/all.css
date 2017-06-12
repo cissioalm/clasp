@@ -1105,6 +1105,10 @@ p.bibtex > a {
   text-decoration: none !important;
 }
 
+p.bibtex.bibtex-small {
+  font-size: 8px !important;
+}
+
 td.year {
   font-weight: bold;
   vertical-align: text-top;

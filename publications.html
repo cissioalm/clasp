@@ -35,7 +35,13 @@
                   j.trigger(e);
               });
           });
-          /*$("#nav-link-publications").addClass("link--highlight");*/
+          var $zoom = ((window.outerWidth - 8) / window.innerWidth).toString();
+          var $deviceWidth = $(window).width().toString();
+          if ($deviceWidth <= '1000' || $zoom > '1') {
+              $("p.bibtex").each(function() {
+                  $(this).addClass('bibtex-small');
+              });
+          }
       });
     </script>
     <script type="text/javascript">
