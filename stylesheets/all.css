@@ -1,11 +1,11 @@
-:root {
-  --RIT_BROWN:#513127;
-  --RIT_ORANGE:#F36E21;
-  --DARK_GREY:#333333;
-  --LIGHT_GREY:#E7E7E7;
-  --CARD_GREY:#F7F7F7;
-  --LEGACY_GREY:#E7F1EC;
-}
+/*:root {*/
+  /*--RIT_BROWN:#513127;*/
+  /*--RIT_ORANGE:#F36E21;*/
+  /*--DARK_GREY:#333333;*/
+  /*--LIGHT_GREY:#E7E7E7;*/
+  /*--CARD_GREY:#F7F7F7;*/
+  /*--LEGACY_GREY:#E7F1EC;*/
+/*}*/
 
 @charset "UTF-8";
 /* Bitters 0.10.0
@@ -16,7 +16,7 @@
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: var(--RIT_ORANGE);
+  background-color: #F36E21;
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -113,7 +113,7 @@ a {
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: var(--RIT_ORANGE);
+  color: #F36E21;
   text-decoration: none;
   /*border-bottom: 1px solid #FF6D24;*/ }
   /* line 82, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_typography.scss */
@@ -156,7 +156,7 @@ cite {
 
 /* line 1, /Users/willpaul/Sites/clasp/site/source/stylesheets/base/_forms.scss */
 fieldset {
-  background: var(--LIGHT_GREY);
+  background: #E7E7E7;
   border: 1px solid #DDD;
   margin: 0 0 0.75em 0;
   padding: 1.5em; }
@@ -208,7 +208,7 @@ select[multiple=multiple] {
   textarea:focus,
   input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
   select[multiple=multiple]:focus {
-    border-color: var(--RIT_ORANGE);
+    border-color: #F36E21;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(255, 92, 10, 0.7);
     outline: none; }
 
@@ -523,7 +523,7 @@ html {
 
 /* line 178, /Users/willpaul/Sites/clasp/site/source/stylesheets/footable.css.scss */
 .footable-odd {
-  background-color: var(--LIGHT_GREY); }
+  background-color: #E7E7E7; }
 
 /*//////////////////////////////////////////////////////////////////////////*/
 @font-face {
@@ -615,7 +615,7 @@ h2.important {
 /*//////////////////////////////////////////////////////////////////////////*/
 /* line 109, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .banner {
-  background-color: var(--LIGHT_GREY);
+  background-color: #E7E7E7;
   width: 100%;
   z-index: 9999;
   border: 1px solid gainsboro; }
@@ -683,7 +683,7 @@ h2.important {
     z-index: 99999; }
     /* line 200, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
     .banner ul.banner-menu.show {
-      display: block; }
+      display: inline-block; }
     @media screen and (min-width: 53.75em) {
       /* line 189, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
       .banner ul.banner-menu {
@@ -695,7 +695,7 @@ h2.important {
       margin-left: 2.2em; } }
   /* line 218, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
   .banner ul li.nav-link {
-    background: var(--LIGHT_GREY);
+    background: #E7E7E7;
     display: block;
     line-height: 3.5em;
     overflow: hidden;
@@ -748,7 +748,7 @@ h2.important {
 
 /* line 278, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .card {
-  background-color: var(--CARD_GREY);
+  background-color: #F7F7F7;
   border-radius: 3px;
   border: 1px solid #DDD;
   position: relative;
@@ -788,7 +788,7 @@ h2.important {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background-color: var(--CARD_GREY);
+    background-color: #F7F7F7;
     border-bottom: 1px solid #DDD;
     border-radius: 3px 3px 0 0;
     font-weight: bold;
@@ -933,8 +933,24 @@ h2.important {
   margin-bottom: 0;
 }
 
+@media (max-width: 700px) {
+  .publications td:nth-child(3) > div {
+    text-align: center;
+    padding-top: 1em;
+  }
+  .publications td:nth-child(3) > div > p { display: inline-block; }
+  .publications td:nth-child(2) > p { display: none; }
+}
+
+@media (min-width: 701px) {
+  .publications td:nth-child(3) > div > p { display: none; }
+
+  .publications td:nth-child(2) > p:nth-child(1) { display: inline; }
+  .publications td:nth-child(2) > p:nth-child(2) { display: inline; }
+}
+
 .publications td:nth-child(4) > p.tag {
-  border: 2px solid var(--DARK_GREY);
+  border: 2px solid #333333;
   /*background-color: #F36E21;*/
   border-radius: 15px;
   text-align: left;
@@ -943,12 +959,12 @@ h2.important {
   font-weight: bold;
   font-size: 15px;
   padding-left: 0.5em;
-  color: var(--DARK_GREY);
+  color: #333333;
 }
 
 .publications td:nth-child(4) > p.tag:hover {
-  background-color: var(--DARK_GREY);
-  color: var(--LIGHT_GREY);
+  background-color: #333333;
+  color: #E7E7E7;
 }
 
 .publications td:nth-child(4) > p.tag:before {
@@ -957,47 +973,20 @@ h2.important {
   font-weight: normal !important;
 }
 
-.publications td:nth-child(4) > p.tag.tag-medical {
-  /*border-color: #FF6D24;
-  background-color: #FF6D24;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-medical:before {
   content: "\f21e";  
-}
-
-.publications td:nth-child(4) > p.tag.tag-semantics {
-  /*border-color: deepskyblue;
-  background-color: deepskyblue;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-semantics:before {
   content: "\f12e";
 }
 
-.publications td:nth-child(4) > p.tag.tag-software {
-  /*border-color: darkslateblue;
-  background-color: darkslateblue;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-software:before {
   content: "\f120";
 }
 
-.publications td:nth-child(4) > p.tag.tag-discourse {
-  /*border-color: darkgreen;
-  background-color: darkgreen;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-discourse:before {
   content: "\f086";
-}
-
-.publications td:nth-child(4) > p.tag.tag-cybersecurity {
-  /*height: 26px !important;
-  border-color: darkmagenta;
-  background-color: darkmagenta;
-  font-size: 14px !important;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-cybersecurity:before {
@@ -1005,94 +994,52 @@ h2.important {
   /*font-size: 14px !important;*/
 }
 
-.publications td:nth-child(4) > p.tag.tag-imageprocessing {
-  /*border-color: #46CC00;
-  background-color: #46CC00;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-imageprocessing:before {
   content: "\f030";
-}
-
-.publications td:nth-child(4) > p.tag.tag-affect {
-  /*border-color: #333333;
-  background-color: #333333;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-affect:before {
   content: "\f118";
 }
 
-.publications td:nth-child(4) > p.tag.tag-socialmedia {
-  /*border-color: #660000;
-  background-color: #660000;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-socialmedia:before {
   content: "\f292";
-}
-
-.publications td:nth-child(4) > p.tag.tag-eyetracking {
-  /*border-color: #6666ff;
-  background-color: #6666ff;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-eyetracking:before {
   content: "\f06e";
 }
 
-.publications td:nth-child(4) > p.tag.tag-psycholinguistics {
-  /*border-color: #664400;
-  background-color: #664400;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-psycholinguistics:before {
   content: "\f1b3";
-}
-
-.publications td:nth-child(4) > p.tag.tag-speech {
-  /*border-color: #666666;
-  background-color: #666666;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-speech:before {
   content: "\f0a1";
 }
 
-.publications td:nth-child(4) > p.tag.tag-multimodal {
-  /*border-color: #000099;
-  background-color: #000099;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-multimodal:before {
   content: "\f03d";
-}
-
-.publications td:nth-child(4) > p.tag.tag-annotation {
-  /*border-color: #513127;
-  background-color: #513127;*/
 }
 
 .publications td:nth-child(4) > p.tag.tag-annotation:before {
   content: "\f040";
 }
 
-.publications td:nth-child(4) > p.tag.tag-narratives {
-  /*border-color: #CC3399;
-  background-color: #CC3399;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-narratives:before {
   content: "\f0f6";
 }
 
-.publications td:nth-child(4) > p.tag.tag-literature {
-  /*border-color: #6689A1;
-  background-color: #6689A1;*/
-}
-
 .publications td:nth-child(4) > p.tag.tag-literature:before {
   content: "\f02d";
+}
+
+.publications td:nth-child(4) > p.tag.tag-teaching:before {
+  content: "\f19d";
+}
+
+.publications td:nth-child(4) > p.tag.tag-visualization:before {
+  content: "\f200";
 }
 
 .publication td:nth-child(3) {}

@@ -35,13 +35,6 @@
                   j.trigger(e);
               });
           });
-          var $zoom = ((window.outerWidth - 8) / window.innerWidth).toString();
-          var $deviceWidth = $(window).width().toString();
-          if ($deviceWidth <= '1000' || $zoom > '1') {
-              $("p.bibtex").each(function() {
-                  $(this).addClass('bibtex-small');
-              });
-          }
       });
     </script>
     <script type="text/javascript">
@@ -67,22 +60,41 @@
   <input type="text" placeholder="Filter by term, e.g. semantics or IEEE..." class="filter" id="js-text-filter">
 
   <table class="publications toggle-arrow-tiny" id="js-publications" data-filter="#js-text-filter">
-    <col width="5%">
+    <col width="6%">
     <col width="4%">
-    <col width="75%">
+    <col width="74%">
     <col width="16%">
 
     <thead>
       <tr>
         <th data-hide="phone">Year</th>
-        <th data-sort-ignore="true"></th>
+        <th data-sort-ignore="true" data-hide="phone"></th>
         <th data-toggle="true">Publication</th>
         <th data-hide="phone">Topic(s)</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr>
+      <tr id="paper0049">
+        <td class="year">2017</td>
+        <td> <!-- PDF, BIBTEX -->
+          <p class="bibtex"><a href="javascript:void(0);" target="_blank" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+          <br><p class="bibtex"><a href="javascript:copyToClipboard('#Meyers2017');" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          <p hidden id="Meyers2017"></p>
+        </td>
+        <td> <!-- TITLE, AUTHORS, DETAILS -->
+          <p>An Analysis and Visualization Tool for Case Study Learning of Linguistic Concepts.</p>
+          <p><b>Cecilia O. Alm</b>, <b>Benjamin S. Meyers</b>, and <b>Emily Prud'hommeaux</b></p>
+          <p>EMNLP '17: Proceedings of the Conference on Empirical Methods in Natural Language Processing. Accepted.</p>
+          <div>
+            <p class="bibtex"><a href="javascript:void(0);" target="_blank" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Meyers2017');" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
+        </td>
+        <td><p class="tag tag-software">&nbsp;Software</p><p class="tag tag-teaching">&nbsp;Teaching</p><p class="tag tag-visualization">&nbsp;Visualization</p></td>
+      </tr>
+
+      <tr id="paper0048">
         <td class="year">2017</td>
         <td> <!-- PDF, BIBTEX -->
           <p class="bibtex"><a href="javascript:void(0);" target="_blank" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
@@ -93,6 +105,10 @@
           <p>Natural language insights from code reviews that missed a vulnerability: A large scale study of Chromium.</p>
           <p>Nuthan Munaiah, <b>Benjamin S. Meyers</b>, <b>Cecilia O. Alm</b>, Andrew Meneely, Pradeep K. Murukannaiah, <b>Emily Prud'hommeaux</b>, Josephine Wolff, and Yang Yu.</p>
           <p>ESSoS '17: Proceedings of the 9th International Symposium for Engineering Secure Software and Systems. Accepted.</p>
+          <div>
+            <p class="bibtex"><a href="javascript:void(0);" target="_blank" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Munaiah2017');" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-cybersecurity">&nbsp;Cybersecurity</p><p class="tag tag-discourse">&nbsp;Discourse</p><p class="tag tag-software">&nbsp;Software</p></td>
       </tr>
@@ -108,6 +124,10 @@
           <p>Vector space models for evaluating semantic fluency in autism.</p>
           <p><b>Emily Prud'hommeaux</b>, Jan van Santen, and <b>Douglas Gliner</b>.</p>
           <p>ACL '17: Proceedings of the 2017 Meeting for the Association for Computational Linguistics. Accepted.</p>
+          <div>
+            <p class="bibtex"><a href="javascript:void(0);" target="_blank" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Prud2017');" title="Coming Soon!" style="color: #666666 !important;"><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -123,6 +143,10 @@
           <p>Understanding the semantics of narratives of interpersonal violence through reader annotations and physiological reactions.</p>
           <p><b>Alexander Calderwood</b>, <b>Elizabeth A. Pruett</b>, Raymond Ptucha, Christopher Homan, and <b>Cecilia O. Alm</b>.</p>
           <p>SemBEaR at EACL '17: Proceedings of the Workshop on Computational Semantics beyond Events and Roles.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W17/W17-1801.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Calderwood2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -138,6 +162,10 @@
           <p>Sensor-based methodological observations for studying online learning.</p>
           <p>Ashley Edwards, Anthony Massicci, Srinivas Sridharan, Joe Geigel, Linwei Wang, Reynold Bailey, and <b>Cecilia O. Alm</b>.</p>
           <p>IUI '17: Proceedings of the SmartLearn Workshop: Intelligent Interfaces for Ubiquitous and Smart Learning.</p>
+          <div>
+            <p class="bibtex"><a href="http://delivery.acm.org/10.1145/3040000/3038536/p25-edwards.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Edwards2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-multimodal">&nbsp;Multimodal</p></td>
       </tr>
@@ -153,6 +181,10 @@
           <p>Semantic text summarization of long videos.</p>
           <p>Shagan Sah, Sourabh Kulhare, Allison Gray, Subhashini Venugopalan, <b>Emily Prud'hommeaux</b>, and Raymond Ptucha.</p>
           <p>WACV at IEEE '17: Proceedings of the IEEE Winter Conference on Applications of Computer Vision.</p>
+          <div>
+            <p class="bibtex"><a href="https://www.cs.utexas.edu/~vsub/pdf/wacv-semantic-text.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Sah2017');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-imageprocessing">&nbsp;Images</p><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -168,6 +200,10 @@
           <p>Using co-captured face, gaze and verbal reactions to images of varying emotional content for analysis and semantic alignment.</p>
           <p><b>Aliya Gangji</b>, <b>Trevor Walden</b>, <b>Emily Prud'hommeaux</b>, Reynold Bailey, and <b>Cecilia O. Alm</b>.</p>
           <p>HAAI at AAAI '17: Proceedings of Human-Aware AI Workshop at the Conference for the Association for the Advancement of Artificial Intelligence.</p>
+          <div>
+            <p class="bibtex"><a href="http://aaai.org/ocs/index.php/WS/AAAIW17/paper/view/15116/14725" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Gangji2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -183,6 +219,10 @@
           <p>Analyzing gender bias in student evaluations.</p>
           <p><b>Andamlak Terkik</b>, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, Christopher Homan, and Scott Franklin.</p>
           <p>COLING '16: Proceedings of the 26th International Conference on Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="https://aclweb.org/anthology/C/C16/C16-1083.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Terkik2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -198,6 +238,10 @@
           <p>Intelligent medical image grouping through interactive learning.</p>
           <p>Xuan Guo, Qi Yu, Rui Li, <b>Cecilia O. Alm</b>, Cara Calvelli, Pengcheng Shi, and Anne R. Haake.</p>
           <p>International Journal of Data Science and Analytics.</p>
+          <div>
+            <p class="bibtex"><a href="http://rdcu.be/jXEk" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Guo2016b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-imageprocessing">&nbsp;Images</p><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
@@ -213,6 +257,10 @@
           <p>Understanding discourse on work and job-related well-being in public social media.</p>
           <p><b>Tong Liu</b>, Christopher Homan, <b>Cecilia O. Alm</b>, Megan Lytle, Ann Marie White, and Henry Kautz.</p>
           <p>ACL '16: Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="https://www.aclweb.org/anthology/P/P16/P16-1099.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Liu2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-discourse">&nbsp;Discourse</p><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -228,6 +276,10 @@
           <p>Modeling eye movement patterns to characterize perceptual skills in image-based diagnostic reasoning processes.</p>
           <p>Rui Li, Pengcheng Shi, Jeff Pelz, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
           <p>Computer Vision and Image Understanding, 151: 138-152.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.sciencedirect.com/science/article/pii/S1077314216000734" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Li2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
@@ -243,6 +295,10 @@
           <p>Generating clinically relevant texts: A case study on life-changing events.</p>
           <p><b>Mayuresh Oak</b>, <b>Anil K. Behera</b>, <b>Titus P. Thomas</b>, <b>Cecilia O. Alm</b>, <b>Emily Prud'hommeaux</b>, Christopher Homan, and Raymond Ptucha.</p>
           <p>Proceedings of the 3rd Workshop on Computational Linguistics and Clinical Psychology.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W16/W16-0309.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Oak2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
@@ -258,6 +314,10 @@
           <p>Towards early dementia detection: fusing linguistic and non-linguistic clinical data.</p>
           <p><b>Joseph Bullard</b>, <b>Cecilia O. Alm</b>, Xumin Liu, Rub&eacute;n Proa&ntilde;o, and Qi Yu.</p>
           <p>Proceedings of the 3rd Workshop on Computational Linguistics and Clinical Psychology.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W16/W16-0302.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
@@ -273,6 +333,10 @@
           <p>An expert-in-the-loop paradigm for learning medical image grouping.</p>
           <p>Xuan Guo, Qi Yu, Rui Li, <b>Cecilia O. Alm</b>, Cara Calvelli, Pengcheng Shi, and Anne R. Haake.</p>
           <p>PAKDD '16: Proceedings of Pacific Asia Knowledge Discovery and Data Mining Conference.</p>
+          <div>
+            <p class="bibtex"><a href="http://link.springer.com/chapter/10.1007%2F978-3-319-31753-3_38" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Guo2016a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-multimodal">&nbsp;Multimodal</p></td>
       </tr>
@@ -285,9 +349,13 @@
           <p hidden id="Alm2016">@article{Alm:2016, title={Language as Sensor in Human-Centered Computing: Clinical Contexts as Use Cases}, author={Alm, Cecilia Ovesdotter}, journal={Language and Linguistics Compass}, volume={10}, number={3}, pages={105--119}, year={2016}, publisher={Wiley Online Library}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-        <p>Natural language as sensor in human-centered computing: Clinical contexts as use cases.</p>
+          <p>Natural language as sensor in human-centered computing: Clinical contexts as use cases.</p>
           <p><b>Cecilia O. Alm.</b></p>
           <p>Language &amp; Linguistics Compass: Computational &amp; Mathematical, 10(3): 105-119.</p>
+          <div>
+            <p class="bibtex"><a href="http://onlinelibrary.wiley.com/doi/10.1111/lnc3.12171/abstract" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Alm2016');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -303,6 +371,10 @@
           <p>Fusing eye movements and observer narratives for expert-driven image-region annotations.</p>
           <p><b>Preethi Vaidyanathan</b>, Jeff B. Pelz, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
           <p>ETRA '16: Proceedings of the Symposium on Eye Tracking Research and Applications. <strong>Best paper award.</strong></p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2857542" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -318,6 +390,10 @@
           <p>An analysis of domestic abuse discourse on Reddit.</p>
           <p><b>Nicolas Schrading</b>, <b>Cecilia O. Alm</b>, Raymond Ptucha, and Christopher M. Homan.</p>
           <p>EMNLP '15: Proceedings of the Conference on Empirical Methods in Natural Language Processing.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/D/D15/D15-1309.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Schrading2015b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-discourse">&nbsp;Discourse</p><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -333,6 +409,10 @@
           <p>Computational integration of human vision and natural language through bitext alignment.</p>
           <p><b>Preethi Vaidyanathan</b>, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, and Jeff B. Pelz.</p>
           <p>iV&amp;L at EMNLP '15: Proceedings of the Workshop on Vision and Language at the Conference on Empirical Methods in Natural Language Processing.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/W/W15/W15-2802.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2015b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -348,6 +428,10 @@
           <p>Face-speech sensor fusion for non-invasive stress detection.</p>
           <p>Vasudev Bethamcherla, <b>Will Paul</b>, <b>Cecilia O. Alm</b>, Reynold Bailey, Joe Geigel, and Linwei Wang.</p>
           <p>AVSP '15: Proceedings of 1st Conference on Facial Analysis, Animation &amp; Auditory-Visual Speech Processing.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.isca-speech.org/archive/avsp15/papers/av15_196.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Bethamcherla2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -363,6 +447,10 @@
           <p>Stressed out: What speech tells us about stress.</p>
           <p><b>Will Paul</b>, <b>Cecilia O. Alm</b>, Reynold Bailey, Joe Geigel, and Linwei Wang.</p>
           <p>Interspeech '15: Proceedings of the 15th Annual Conference of the International Speech Communication Association.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.isca-speech.org/archive/interspeech_2015/papers/i15_3710.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Paul2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -378,6 +466,10 @@
           <p>Measuring idiosyncratic interests in children with autism.</p>
           <p>Masoud Rouhizadeh, <b>Emily Prud'hommeaux</b>, Jan van Santen, and Richard Sproat.</p>
           <p>ACL '15: Proceedings of 53rd Annual Meeting of the Association for Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/P/P15/P15-2035.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Rouhizadeh2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -393,6 +485,10 @@
           <p>#WhyIStayed, #WhyILeft: Microblogging to make sense of domestic abuse.</p>
           <p><b>Nicolas Schrading</b>, <b>Cecilia O. Alm</b>, Raymond Ptucha, and Christopher Homan.</p>
           <p>NAACL-HLT '15: Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://aclweb.org/anthology/N/N15/N15-1139.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Schrading2015a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-socialmedia">&nbsp;Social Media</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -408,6 +504,10 @@
           <p>Graph-based word alignment for clinical language evaluation.</p>
           <p><b>Emily Prud'hommeaux</b> and Brian Roark.</p>
           <p>Computational Linguistics December 2015, Vol. 41, No. 4: 549–578.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.mitpressjournals.org/toc/coli/41/4" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Prud2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
@@ -423,6 +523,10 @@
           <p>Alignment of eye movements and spoken language for semantic image understanding.</p>
           <p><b>Preethi Vaidyanathan</b>, <b>Emily Prud'hommeaux</b>, <b>Cecilia O. Alm</b>, Jeff B. Pelz, and Anne R. Haake.</p>
           <p>IWCS '15: Proceedings of the 11th International Conference on Computational Semantics.</p>
+          <div>
+            <p class="bibtex"><a href="http://iwcs2015.github.io/static/proceedings/main/pdf/IWCS201511.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2015a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-semantics">&nbsp;Semantics</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -438,6 +542,10 @@
           <p>Inference from structured and unstructured electronic medical data for early dementia detection.</p>
           <p><b>Joseph Bullard</b>, Rohan Murde, Qi Yu, <b>Cecilia O. Alm</b>, and Rub&eacute;n Proa&ntilde;o.</p>
           <p>ICS '15: Proceedings of the 2015 Conference for the INFORMS Computing Society.</p>
+          <div>
+            <p class="bibtex"><a href="http://scholarworks.rit.edu/cgi/viewcontent.cgi?article=1846&context=other" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2015');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -453,6 +561,10 @@
           <p>Fusing multimodal human expert data to uncover hidden semantics.</p>
           <p>Xuan Guo, Qi Yu, Rui Li, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
           <p>GazeIn '14: Proceedings of the 7th Workshop on Eye Gaze in Intelligent Human Machine Interaction: Eye-Gaze &amp; Multimodality.</p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2666642.2666649" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Guo2014c');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -468,6 +580,10 @@
           <p>Towards automatic annotation of clinical decision-making style.</p>
           <p><b>Limor Hochberg</b>, <b>Cecilia O. Alm</b>, Esa M. Rantanen, Qi Yu, Caroline M. Delong, and Anne R. Haake.</p>
           <p>LAW-VIII '14: Proceedings of the 8th Linguistic Annotation Workshop.</p>
+          <div>
+            <p class="bibtex"><a href="http://aclweb.org/anthology/W14-4919" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Hochberg2014b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -483,6 +599,10 @@
           <p>Towards multimodal modeling of physicians' diagnostic confidence and self-awareness using medical narratives.</p>
           <p><b>Joseph Bullard</b>, <b>Cecilia O. Alm</b>, Qi Yu, Pengcheng Shi, and Anne R. Haake.</p>
           <p>COLING '14: Proceedings of the 25th International Conference on Computational Linguistics: Technical Papers.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/C14-1162" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2014b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -498,6 +618,10 @@
           <p>Decision style in a clinical reasoning corpus.</p>
           <p><b>Limor Hochberg</b>, <b>Cecilia O. Alm</b>, Esa M. Rantanen, Caroline M. DeLong, and Anne R. Haake.</p>
           <p>BioNLP '14: Proceedings of the Workshop on Biomedical Natural Language Processing.</p>
+          <div>
+            <p class="bibtex"><a href="http://anthology.aclweb.org/W/W14/W14-3412.pdf#page=95" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Hochberg2014a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-psycholinguistics">&nbsp;Psycholinguistics</p></td>
       </tr>
@@ -513,6 +637,10 @@
           <p>Toward macro-insights for suicide prevention: Analyzing fine-grained distress at scale.</p>
           <p>Christopher Homan, <b>Ravdeep Johar</b>, <b>Tong Liu,</b> Megan Lytle, Vincent Silenzio, and <b>Cecilia O. Alm</b>.</p>
           <p>Proceedings of the Workshop on Computational Linguistics and Clinical Psychology: From Linguistic Signal to Clinical Reality.</p>
+          <div>
+            <p class="bibtex"><a href="http://anthology.aclweb.org/W/W14/W14-3213.pdf#page=119" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Homan2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-psycholinguistics">&nbsp;Psycholinguistics</p></td>
       </tr>
@@ -525,9 +653,13 @@
           <p hidden id="Bullard2014a">@inproceedings{Bullard:2014, title={Computational analysis to explore authors' depiction of characters}, author={Bullard, Joseph and Alm, Cecilia Ovesdotter}, booktitle={Proceedings of the 3rd Workshop on Computational Linguistics for Literature (CLfL)}, pages={11--16}, year={2014}}</p>
         </td>
         <td> <!-- TITLE, AUTHORS, DETAILS -->
-        <p>Computational analysis to explore authors' depiction of characters.</p>
+          <p>Computational analysis to explore authors' depiction of characters.</p>
           <p><b>Joseph Bullard</b>, and <b>Cecilia O. Alm</b>.</p>
           <p>EACL-CLfL '14: Proceedings of the 3rd Workshop on Computational Linguistics for Literature.</p>
+          <div>
+            <p class="bibtex"><a href="http://anthology.aclweb.org/W/W14/W14-0902.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Bullard2014a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-literature">&nbsp;Literature</p></td>
       </tr>
@@ -543,6 +675,10 @@
           <p>Infusing perceptual expertise and domain knowledge into a human-centered image retrieval system: A prototype application.</p>
           <p>Xuan Guo, Rui Li, <b>Cecilia O. Alm</b>, Qi Yu, Jeff Pelz, Pengcheng Shi, and Anne R. Haake.</p>
           <p>ETRA '14: Proceedings of the Symposium on Eye Tracking Research and Applications.</p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2578153.2578196" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Guo2014b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-imageprocessing">&nbsp;Images</p><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -558,6 +694,10 @@
           <p>From spoken narratives to domain knowledge: Mining linguistic data for medical image understanding.</p>
           <p>Xuan Guo, Qi Yu, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
           <p>Journal of Artificial Intelligence in Medicine.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aiimjournal.com/article/S0933-3657%2814%2900085-2/abstract" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Guo2014a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -573,6 +713,10 @@
           <p>Recurrence quantification analysis reveals eye-movement behavior differences between experts and novices.</p>
           <p><b>Preethi Vaidyanathan</b>, Jeff Pelz, <b>Cecilia O. Alm</b>, Pengcheng Shi, and Anne R. Haake.</p>
           <p>ETRA '14: Proceedings of the Symposium on Eye Tracking Research and Applications.</p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2578153.2578207" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Vaidyanathan2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-medical">&nbsp;Medical</p></td>
       </tr>
@@ -588,6 +732,10 @@
           <p>Computational analysis of trajectories of linguistic development in autism.</p>
           <p><b>Emily Prud'hommeaux</b>, Eric Morley, Masoud Rouhizadeh, Laura Silverman, Jan van Santen, Brian Roark, Richard Sproat, Sarah Kauper, and Rachel DeLaHunta.</p>
           <p>IEEE-SLT '14: Proceedings of the 2014 IEEE Spoken Language Technology Workshop.</p>
+          <div>
+            <p class="bibtex"><a href="http://people.rit.edu/emilypx/PrudhommeauxSLT.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Prud2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -603,6 +751,10 @@
           <p>Detecting linguistic idiosyncratic interests in autism using distributional semantic models.</p>
           <p>Masoud Rouhizadeh, <b>Emily Prud'hommeaux</b>, Jan van Santen, and Richard Sproat.</p>
           <p>CLPsych '14: Proceedings of the ACL 2014 Workshop on Computational Linguistics and Clinical Psychology.</p>
+          <div>
+            <p class="bibtex"><a href="http://acl2014.org/acl2014/W14-32/pdf/W14-3206.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Rouhizadeh2014');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -618,6 +770,10 @@
           <p>Markers of confidence and correctness in spoken medical narratives.</p>
           <p><b>Kathryn Womack</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
           <p>Interspeech '13: Proceedings of the 13th Annual Conference of the International Speech Communication Association.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.isca-speech.org/archive/archive_papers/interspeech_2013/i13_2549.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Womack2013b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -633,6 +789,10 @@
           <p>Investigation of MT-based ASR confusion models for semi-supervised discriminative language modeling.</p>
           <p>Erin&#231; Dikici, <b>Emily Prud'hommeaux</b>, Brian Roark, and Murat Sara&#231;lar.</p>
           <p>Interspeech '13: Proceedings of the 13th Annual Conference of the International Speech Communication Association.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.busim.ee.boun.edu.tr/~erinc/pubs/interspeech13.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Dikici2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -648,6 +808,10 @@
           <p>Using linguistic analysis to characterize conceptual units of thought in spoken medical narratives.</p>
           <p><b>Kathryn Womack</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
           <p>Interspeech '13: Proceedings of the 13th Annual Conference of the International Speech Communication Association.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.isca-speech.org/archive/archive_papers/interspeech_2013/i13_3722.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Womack2013a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -663,6 +827,10 @@
           <p>Distributional semantic models for the evaluation of disordered language.</p>
           <p>Masoud Rouhizadeh, <b>Emily Prud'hommeaux</b>, Brian Roark, and Jan van Santen.</p>
           <p>NAACL-HLT '13: Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.cs.rochester.edu/u/emilypx/RouhizadehEtAl2013-NAACL.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Rouhizadeh2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -678,6 +846,10 @@
           <p>Discriminative joint modeling of lexical variation and acoustic confusion for automated narrative retelling assessment.</p>
           <p>Maider Lehr, Izhak Shafran, <b>Emily Prud'hommeaux</b>, and Brian Roark.</p>
           <p>NAACL-HLT '13: Proceedings of the Human Language Technology Conference of the North American Chapter of the Association for Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.cslu.ogi.edu/~zak/naacl13-mcicrf.pdf" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Lehr2013');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-semantics">&nbsp;Semantics</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -693,6 +865,10 @@
           <p>The role of affect in the computational modeling of <em>natural</em> language.</p>
           <p><b>Cecilia O. Alm</b>.</p>
           <p>Language &amp; Linguistics Compass: Computational &amp; Mathematical, 6(7), 416-430.</p>
+          <div>
+            <p class="bibtex"><a href="http://onlinelibrary.wiley.com/doi/10.1002/lnc3.334/abstract" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Alm2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -708,6 +884,10 @@
           <p>Disfluencies as extra-propositional indicators of cognitive processing.</p>
           <p><b>Kathryn Womack</b>, <b>Wilson McCoy</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
           <p>ExProM '12: Proceedings of the Workshop on Extra-Propositional Aspects of Meaning in Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/W12-3801" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Womack2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-semantics">&nbsp;Semantics</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -723,6 +903,10 @@
           <p>Linking uncertainty in physicians' narratives to diagnostic correctness.</p>
           <p><b>Wilson McCoy</b>, Jeff B. Pelz, <b>Cecilia O. Alm</b>, Pengcheng Shi, Cara Calvelli, and Anne R. Haake.</p>
           <p>ExProM '12: Proceedings of the Workshop on Extra-Propositional Aspects of Meaning in Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2392701.2392704" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#McCoy2012b');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -738,6 +922,10 @@
           <p>Annotation schemes to encode domain knowledge in medical narratives.</p>
           <p><b>Wilson McCoy</b>, <b>Cecilia O. Alm</b>, Cara Calvelli, Ru Li, Jeff B. Pelz, Pengcheng Shi, and Anne R. Haake.</p>
           <p>LAW VI '12: Proceedings of the 6th Linguistic Annotation Workshop of the Association for Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2392747.2392761" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#McCoy2012a');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-annotation">&nbsp;Annotation</p><p class="tag tag-medical">&nbsp;Medical</p><p class="tag tag-narratives">&nbsp;Narratives</p></td>
       </tr>
@@ -753,6 +941,10 @@
           <p>Detecting distressed and non-distressed affect states in short forum texts.</p>
           <p>Michael Thaul Lehrman, <b>Cecilia O. Alm</b>, and Rub&eacute;n A. Proa&ntilde;o.</p>
           <p>LSM '12: Proceedings of the 2nd Workshop on Language in Social Media.</p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2390374.2390376" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Lehrman2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-affect">&nbsp;Affect</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -768,6 +960,10 @@
           <p>Learning eye movement patterns for characterization of perceptual expertise.</p>
           <p>Rui Li, Jeff Pelz, Pengcheng Shi, <b>Cecilia O. Alm</b>, and Anne R. Haake.</p>
           <p>ETRA '12: Proceedings of the Symposium on Eye Tracking Research and Applications.</p>
+          <div>
+            <p class="bibtex"><a href="http://dl.acm.org/citation.cfm?id=2168556.2168645" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Li2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-eyetracking">&nbsp;Eye-Tracking</p><p class="tag tag-multimodal">&nbsp;Multimodal</p><p class="tag tag-speech">&nbsp;Speech</p></td>
       </tr>
@@ -783,6 +979,10 @@
           <p>Graph-based alignment of narratives for automated neurological assessment.</p>
           <p><b>Emily Prud'hommeaux</b>, and Brian Roark.</p>
           <p>BioNLP '12: Proceedings of the 2012 Workshop on Biomedical Natural Language Processing.</p>
+          <div>
+            <p class="bibtex"><a href="http://www.aclweb.org/anthology/W12-2401" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Prud2012');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-narratives">&nbsp;Narratives</p><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
@@ -798,6 +998,10 @@
           <p>Subjective natural language problems: Motivations, applications, characterizations, and implications.</p>
           <p><b>Cecilia O. Alm</b>.</p>
           <p>NAACL-HLT '11: Proceedings of the Human Language Technologies Conference of the North American Chapter of the Association for Computational Linguistics.</p>
+          <div>
+            <p class="bibtex"><a href="http://anthology.aclweb.org/P/P11/P11-2.pdf#page=147" target="_blank" title="PDF"><i class="fa fa-file-pdf-o fa-2x"></i></a></p>
+            <p class="bibtex"><a href="javascript:copyToClipboard('#Alm2011');" title="Click to Copy BibTeX Citation."><i class="fa fa-pencil-square-o fa-2x"></i></a></p>
+          </div>
         </td>
         <td><p class="tag tag-semantics">&nbsp;Semantics</p></td>
       </tr>
