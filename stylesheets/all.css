@@ -1034,7 +1034,7 @@ h2.important {
   content: "\f02d";
 }
 
-.publications td:nth-child(4) > p.tag.tag-teaching:before {
+.publications td:nth-child(4) > p.tag.tag-education:before {
   content: "\f19d";
 }
 
