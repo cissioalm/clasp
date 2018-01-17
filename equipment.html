@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>CLASP: Equipment</title>
+
+    <link href="stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/4bf3214f2e.js"></script>
+    <script src="javascripts/all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $.get("assets/header.html", function(htmlFile) {
+            $("#clasp-header").html(htmlFile);
+            $("#clasp-header").find("#nav-link-equipment").addClass("link--highlight");
+        });
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="clasp-header" class="banner" role="banner"></header>
+
+
+  <div class="content">
+
+  <h1><i class="fa fa-desktop">&nbsp;</i>equipment</h1>
+
+
+  <table class="equipment">
+    <col width="100%">
+
+    <thead>
+      <tr>
+        <th data-toggle="true">Equipment</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr id="equip0001">
+        <td>
+          <span>Hardware:</span>
+          <ul>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Amazon Echo Dot</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Bang &amp; Olufsen headphones</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Computer monitors</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Desktop and laptop computers</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Headword, clip-on, and free-standing microphones</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Pupil Labs wearable mobile eye-tracking headset</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Shimmer3 galvonic skin response (GSR) sensor</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;TASCAM audio/speech recorder</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Video webcams and peripherals</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;EEG<em>*</em></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Nasality Kit<em>*</em></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Sennheiser singing voice microphone<em>*</em></li>
+          </ul>
+        </td>
+      </tr>
+      <tr id="equip0002">
+        <td>
+          <span>Software:</span>
+          <ul>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;iMotions multimodal data capture and data analysis software</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Linguine, an open-source application for natural language visualization and analysis</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;Various computational linguistics/NLP and speech analysis software</li>
+          </ul>
+        </td>
+      </tr>
+      <tr id="equip0003">
+        <td>
+          <span>Other:</span>
+          <ul>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&bullet;&nbsp;AcoustiMac vocal go-booth system</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    <div style="font-size: small; text-align: right !important;"><em>* Coming Soon</em></div>
+    <div style="font-size: small; text-align: right !important;">Some equipment is shared with the CS <a href="https://www.cs.rit.edu/~graphics/lab/" target="_blank">Graphics and Applied Perception Lab.</a></div>
+  </div>
+    </div>
+  </body>
+</html>

@@ -911,13 +911,13 @@ h2.important {
 
 /*///////////////////////////////////////////////////////////////////////////*/
 /* line 474, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
-.publications table {
+.publications table, .equipment table {
   table-layout: fixed; }
 /* line 478, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
-.publications tr, .publications th {
+.publications tr, .equipment tr, .publications th, .equipment th {
   vertical-align: text-top; }
 /* line 482, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
-.publications th, .publications td {
+.publications th, .equipment th, .publications td, .equipment td {
   padding: 3px; }
 /* line 486, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .publications td:nth-child(2) > p {
@@ -926,8 +926,16 @@ h2.important {
 .publications td:nth-child(3) > p:first-child {
   font-weight: bold;
   font-style: italic; }
+.equipment td:nth-child(1) > span:first-child {
+  font-weight: bold;
+  font-style: italic; }
 /* line 491, /Users/willpaul/Sites/clasp/site/source/stylesheets/all.css.scss */
 .publications td:nth-child(3) > p:nth-child(3) {
+  font-size: 0.85em;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.equipment td:nth-child(1) > span:nth-child(2) {
   font-size: 0.85em;
   font-style: italic;
   margin-bottom: 0;
@@ -940,6 +948,12 @@ h2.important {
   }
   .publications td:nth-child(3) > div > p { display: inline-block; }
   .publications td:nth-child(2) > p { display: none; }
+
+  .equipment td:nth-child(1) > div {
+    text-align: center;
+    padding-top: 1em;
+  }
+  .equipment td:nth-child(1) > div > p { display: inline-block; }
 }
 
 @media (min-width: 701px) {
@@ -962,12 +976,36 @@ h2.important {
   color: #333333;
 }
 
+.equipment td:nth-child(2) > p.tag {
+  border: 2px solid #333333;
+  /*background-color: #F36E21;*/
+  border-radius: 15px;
+  text-align: left;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 0.5em;
+  color: #333333;
+}
+
 .publications td:nth-child(4) > p.tag:hover {
   background-color: #333333;
   color: #E7E7E7;
 }
 
+.equipment td:nth-child(2) > p.tag:hover {
+  background-color: #333333;
+  color: #E7E7E7;
+}
+
 .publications td:nth-child(4) > p.tag:before {
+  width: 1.28571429em;
+  font-family: 'FontAwesome';
+  font-weight: normal !important;
+}
+
+.equipment td:nth-child(2) > p.tag:before {
   width: 1.28571429em;
   font-family: 'FontAwesome';
   font-weight: normal !important;
@@ -1043,9 +1081,26 @@ h2.important {
 }
 
 .publication td:nth-child(3) {}
+.equipment td:nth-child(1) {}
 
 .publications > tbody > tr > td > p > a {
   text-decoration: none !important;
+}
+
+.equipment td:nth-child(2) > p.tag.tag-audio:before {
+  content: "\f025";
+}
+
+.equipment td:nth-child(2) > p.tag.tag-speech:before {
+  content: "\f0a1";
+}
+
+.equipment td:nth-child(2) > p.tag.tag-hardware:before {
+  content: "\f2db";
+}
+
+.equipment td:nth-child(2) > p.tag.tag-software:before {
+  content: "\f0c7";
 }
 
 p.bibtex > a {
